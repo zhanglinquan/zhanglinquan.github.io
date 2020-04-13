@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="他死了BFS，即宽度优先搜索（balabala不讲无意义内容）核心：用一个队列来记录“待办事项”，用最短路来举个例子，代码如下 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657#include&lt;bits&#x2F;stdc++.h&gt;us">
+<meta name="description" content="他死了">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于BFS">
-<meta property="og:url" content="http://yoursite.com/2020/03/06/about-bfs/index.html">
+<meta property="og:url" content="http://yuygfgg.tk/2020/03/06/about-bfs/index.html">
 <meta property="og:site_name" content="yuygfgg&#39;s blog">
-<meta property="og:description" content="他死了BFS，即宽度优先搜索（balabala不讲无意义内容）核心：用一个队列来记录“待办事项”，用最短路来举个例子，代码如下 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657#include&lt;bits&#x2F;stdc++.h&gt;us">
+<meta property="og:description" content="他死了">
 <meta property="article:published_time" content="2020-03-06T12:57:43.000Z">
-<meta property="article:modified_time" content="2020-03-06T13:18:19.161Z">
+<meta property="article:modified_time" content="2020-04-13T12:44:40.042Z">
 <meta property="article:author" content="yuygfgg">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
@@ -119,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/06/about-bfs/"/>
+  <link rel="canonical" href="http://yuygfgg.tk/2020/03/06/about-bfs/"/>
 
 
 
@@ -296,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/06/about-bfs/">
+    <link itemprop="mainEntityOfPage" href="http://yuygfgg.tk/2020/03/06/about-bfs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yuygfgg">
@@ -363,7 +363,10 @@
       
 
       
-        <p><del>他死了</del><br>BFS，即宽度优先搜索（balabala不讲无意义内容）<br>核心：用一个队列来记录“待办事项”，用最短路来举个例子，代码如下</p>
+        <p><del>他死了</del></p>
+<a id="more"></a>
+
+<p>BFS，即宽度优先搜索（balabala不讲无意义内容）<br>核心：用一个队列来记录“待办事项”，用最短路来举个例子，代码如下</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> dx[<span class="number">5</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> dy[<span class="number">5</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span>,<span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">1001</span>][<span class="number">1001</span>],q[<span class="number">250000</span>][<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> sx,sy,ex,ey;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">input</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> tmp;</span><br><span class="line">	<span class="built_in">memset</span>(a,<span class="number">-1</span>,<span class="keyword">sizeof</span>(a));</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;tmp;</span><br><span class="line">			<span class="keyword">if</span>(tmp==<span class="string">'.'</span>) a[i][j]=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">if</span>(tmp==<span class="string">'#'</span>) a[i][j]=<span class="number">-1</span>;</span><br><span class="line">			<span class="keyword">if</span>(tmp==<span class="string">'*'</span>)&#123;</span><br><span class="line">				a[i][j]=<span class="number">0</span>;</span><br><span class="line">				ex=i;</span><br><span class="line">				ey=j;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(tmp==<span class="string">'@'</span>)&#123;</span><br><span class="line">				a[i][j]=<span class="number">0</span>;</span><br><span class="line">				sx=i;</span><br><span class="line">				sy=j;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> h=<span class="number">1</span>,t=<span class="number">1</span>,n,m;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	input(n,m);</span><br><span class="line">	q[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	q[<span class="number">1</span>][<span class="number">1</span>]=sx;<span class="comment">//初始化“待办事项</span></span><br><span class="line">	q[<span class="number">1</span>][<span class="number">2</span>]=sy;<span class="comment">//同上</span></span><br><span class="line">	a[<span class="number">1</span>][<span class="number">1</span>]=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">while</span>(h&lt;=t)&#123;</span><br><span class="line">		<span class="keyword">if</span>(q[h][<span class="number">1</span>]==ex&amp;&amp;q[h][<span class="number">2</span>]==ey)&#123;<span class="comment">//达到目标</span></span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;q[h][<span class="number">0</span>]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">4</span>;i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> x,y;</span><br><span class="line">			x=q[h][<span class="number">1</span>]+dx[i];<span class="comment">//拿到事情</span></span><br><span class="line">			y=q[h][<span class="number">2</span>]+dy[i];<span class="comment">//同上</span></span><br><span class="line">			<span class="keyword">if</span>(a[x][y]==<span class="number">0</span>)&#123;<span class="comment">//做事</span></span><br><span class="line">				t++;</span><br><span class="line">				q[t][<span class="number">0</span>]=q[h][<span class="number">0</span>]+<span class="number">1</span>;<span class="comment">//产生新事</span></span><br><span class="line">				q[t][<span class="number">1</span>]=x;<span class="comment">//同上</span></span><br><span class="line">				q[t][<span class="number">2</span>]=y;<span class="comment">//同上</span></span><br><span class="line">				a[x][y]=<span class="number">-1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		h++;<span class="comment">//做完了一件事</span></span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//无解</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这里面没有用STL中的queue，但原理相同。<br>代码中每次穷举的是步数（即离终点的距离），一次while穷举一个步数。<br>可以看到，队列在while循环做完之前不为空（即有效解一定在穷举完所有步数之前得到），所以BFS的解一般是在循环内产生。<br>然后，我们用深搜（DFS）来实现一下</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">105</span>][<span class="number">105</span>],d[<span class="number">105</span>][<span class="number">105</span>],n,m;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dg</span><span class="params">(<span class="keyword">int</span> dep,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(dep&lt;d[i][j]&amp;&amp;dep&lt;<span class="number">200</span>)&#123;</span><br><span class="line">		d[i][j]=dep;</span><br><span class="line">		<span class="keyword">if</span>(a[i][j+<span class="number">1</span>]==<span class="number">0</span>) dg(dep+<span class="number">1</span>,i,j+<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">if</span>(a[i+<span class="number">1</span>][j]==<span class="number">0</span>) dg(dep+<span class="number">1</span>,i+<span class="number">1</span>,j);</span><br><span class="line">		<span class="keyword">if</span>(a[i][j<span class="number">-1</span>]==<span class="number">0</span>) dg(dep+<span class="number">1</span>,i,j<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">if</span>(a[i<span class="number">-1</span>][j]==<span class="number">0</span>) dg(dep+<span class="number">1</span>,i<span class="number">-1</span>,j);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">input</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> tmp;</span><br><span class="line">	<span class="built_in">memset</span>(a,<span class="number">-1</span>,<span class="keyword">sizeof</span>(a));</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;tmp;</span><br><span class="line">			<span class="keyword">if</span>(tmp==<span class="string">'.'</span>) a[i][j]=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">if</span>(tmp==<span class="string">'#'</span>) a[i][j]=<span class="number">-1</span>;</span><br><span class="line">			d[i][j]=INT_MAX;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	input(n,m);</span><br><span class="line">	dg(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;d[n][m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -388,7 +391,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2020/03/06/about-bfs/" title="关于BFS">http://yoursite.com/2020/03/06/about-bfs/</a>
+    <a href="http://yuygfgg.tk/2020/03/06/about-bfs/" title="关于BFS">http://yuygfgg.tk/2020/03/06/about-bfs/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -500,7 +503,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -523,6 +526,22 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/zhanglinquan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:yuygfgg@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           

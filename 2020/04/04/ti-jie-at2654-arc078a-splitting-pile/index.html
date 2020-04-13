@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="思路：暴力求出所有可能，排序求最小绝对值差。 我用vector存储卡的信息，用set排序 12345678910111213141516171819202122232425#include&lt;bits&#x2F;stdc++.h&gt;using namespace std;vector&lt;long long&gt; a;set&lt;long long&gt; b;&#x2F;&#x2F;自动从小到大排序long l">
+<meta name="description" content="思路：暴力求出所有可能，排序求最小绝对值差。 我用vector存储卡的信息，用set排序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="题解 AT2654 【[ARC078A] Splitting Pile】">
-<meta property="og:url" content="http://yoursite.com/2020/04/04/ti-jie-at2654-arc078a-splitting-pile/index.html">
+<meta property="og:url" content="http://yuygfgg.tk/2020/04/04/ti-jie-at2654-arc078a-splitting-pile/index.html">
 <meta property="og:site_name" content="yuygfgg&#39;s blog">
-<meta property="og:description" content="思路：暴力求出所有可能，排序求最小绝对值差。 我用vector存储卡的信息，用set排序 12345678910111213141516171819202122232425#include&lt;bits&#x2F;stdc++.h&gt;using namespace std;vector&lt;long long&gt; a;set&lt;long long&gt; b;&#x2F;&#x2F;自动从小到大排序long l">
+<meta property="og:description" content="思路：暴力求出所有可能，排序求最小绝对值差。 我用vector存储卡的信息，用set排序">
 <meta property="article:published_time" content="2020-04-04T09:55:55.000Z">
-<meta property="article:modified_time" content="2020-04-04T09:56:08.718Z">
+<meta property="article:modified_time" content="2020-04-13T12:47:44.251Z">
 <meta property="article:author" content="yuygfgg">
 <meta name="twitter:card" content="summary">
 
@@ -118,7 +118,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/04/04/ti-jie-at2654-arc078a-splitting-pile/"/>
+  <link rel="canonical" href="http://yuygfgg.tk/2020/04/04/ti-jie-at2654-arc078a-splitting-pile/"/>
 
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/04/ti-jie-at2654-arc078a-splitting-pile/">
+    <link itemprop="mainEntityOfPage" href="http://yuygfgg.tk/2020/04/04/ti-jie-at2654-arc078a-splitting-pile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yuygfgg">
@@ -364,6 +364,8 @@
       
         <p>思路：暴力求出所有可能，排序求最小绝对值差。</p>
 <p>我用vector存储卡的信息，用set排序</p>
+<a id="more"></a>
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; a;</span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; b;<span class="comment">//自动从小到大排序</span></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> s=<span class="number">0</span>,x,y;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,tmp;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;tmp;<span class="comment">//由于空间大小不定，只能用push_back函数放入</span></span><br><span class="line">		a.push_back(tmp);</span><br><span class="line">		s+=tmp;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//现在开始空间大小一定，可以用从0开始的下标访问</span></span><br><span class="line">	x=a[<span class="number">0</span>];</span><br><span class="line">	y=s-a[<span class="number">0</span>];</span><br><span class="line">	b.insert(<span class="built_in">abs</span>(x-y));<span class="comment">//插入第一个</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">		x+=a[i];</span><br><span class="line">		y-=a[i];</span><br><span class="line">		b.insert(<span class="built_in">abs</span>(x-y));<span class="comment">//插入set</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;*b.begin()&lt;&lt;<span class="built_in">endl</span>;<span class="comment">//输出自动排序好的最小数</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -385,7 +387,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2020/04/04/ti-jie-at2654-arc078a-splitting-pile/" title="题解 AT2654 【[ARC078A] Splitting Pile】">http://yoursite.com/2020/04/04/ti-jie-at2654-arc078a-splitting-pile/</a>
+    <a href="http://yuygfgg.tk/2020/04/04/ti-jie-at2654-arc078a-splitting-pile/" title="题解 AT2654 【[ARC078A] Splitting Pile】">http://yuygfgg.tk/2020/04/04/ti-jie-at2654-arc078a-splitting-pile/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -416,6 +418,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/13/some-small-things/" rel="prev" title="一些小东西">
+                一些小东西 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -487,7 +493,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -510,6 +516,22 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/zhanglinquan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:yuygfgg@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           

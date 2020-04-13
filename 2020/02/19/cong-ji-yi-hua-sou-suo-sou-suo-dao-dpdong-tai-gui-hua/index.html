@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="目录 记忆化搜索是啥 记忆化搜索和动态规划有啥关系 动态规划做法1. 记忆化搜索是啥（引入好，就以采药这道题为例，我不会动态规划，只会搜索，我就会直接写一个粗暴的 DFS :  注: 为了方便食用, 本文中所有代码省略头文件 1234567891011121314151617181920int n,t;int tcost[103],mget[103];int ans&#x3D;0;void dfs(int">
+<meta name="description" content="目录 记忆化搜索是啥  记忆化搜索和动态规划有啥关系  动态规划做法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从记忆化搜索到DP（动态规划）">
-<meta property="og:url" content="http://yoursite.com/2020/02/19/cong-ji-yi-hua-sou-suo-sou-suo-dao-dpdong-tai-gui-hua/index.html">
+<meta property="og:url" content="http://yuygfgg.tk/2020/02/19/cong-ji-yi-hua-sou-suo-sou-suo-dao-dpdong-tai-gui-hua/index.html">
 <meta property="og:site_name" content="yuygfgg&#39;s blog">
-<meta property="og:description" content="目录 记忆化搜索是啥 记忆化搜索和动态规划有啥关系 动态规划做法1. 记忆化搜索是啥（引入好，就以采药这道题为例，我不会动态规划，只会搜索，我就会直接写一个粗暴的 DFS :  注: 为了方便食用, 本文中所有代码省略头文件 1234567891011121314151617181920int n,t;int tcost[103],mget[103];int ans&#x3D;0;void dfs(int">
+<meta property="og:description" content="目录 记忆化搜索是啥  记忆化搜索和动态规划有啥关系  动态规划做法">
 <meta property="article:published_time" content="2020-02-19T13:01:57.000Z">
-<meta property="article:modified_time" content="2020-02-21T07:49:43.791Z">
+<meta property="article:modified_time" content="2020-04-13T12:46:05.210Z">
 <meta property="article:author" content="yuygfgg">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
@@ -119,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/02/19/cong-ji-yi-hua-sou-suo-sou-suo-dao-dpdong-tai-gui-hua/"/>
+  <link rel="canonical" href="http://yuygfgg.tk/2020/02/19/cong-ji-yi-hua-sou-suo-sou-suo-dao-dpdong-tai-gui-hua/"/>
 
 
 
@@ -296,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/cong-ji-yi-hua-sou-suo-sou-suo-dao-dpdong-tai-gui-hua/">
+    <link itemprop="mainEntityOfPage" href="http://yuygfgg.tk/2020/02/19/cong-ji-yi-hua-sou-suo-sou-suo-dao-dpdong-tai-gui-hua/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yuygfgg">
@@ -364,9 +364,14 @@
 
       
         <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
-<li>记忆化搜索是啥</li>
-<li>记忆化搜索和动态规划有啥关系</li>
-<li>动态规划做法<h1 id="1-记忆化搜索是啥（引入"><a href="#1-记忆化搜索是啥（引入" class="headerlink" title="1. 记忆化搜索是啥（引入"></a>1. 记忆化搜索是啥（引入</h1>好，就以采药这道题为例，我不会动态规划，只会搜索，我就会直接写一个粗暴的 DFS :</li>
+<li><p>记忆化搜索是啥</p>
+</li>
+<li><p>记忆化搜索和动态规划有啥关系</p>
+</li>
+<li><p>动态规划做法</p>
+<a id="more"></a>
+<h1 id="1-记忆化搜索是啥（引入"><a href="#1-记忆化搜索是啥（引入" class="headerlink" title="1. 记忆化搜索是啥（引入"></a>1. 记忆化搜索是啥（引入</h1><p>好，就以采药这道题为例，我不会动态规划，只会搜索，我就会直接写一个粗暴的 DFS :</p>
+</li>
 </ul>
 <p>注: 为了方便食用, 本文中所有代码省略头文件</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n,t;</span><br><span class="line"><span class="keyword">int</span> tcost[<span class="number">103</span>],mget[<span class="number">103</span>];</span><br><span class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">int</span> tleft,<span class="keyword">int</span> tans)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(tleft&lt;<span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span>(pos==n+<span class="number">1</span>)&#123;</span><br><span class="line">        ans=max(ans,tans);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(pos+<span class="number">1</span>,tleft,tans);</span><br><span class="line">    dfs(pos+<span class="number">1</span>,tleft-tcost[pos],tans+mget[pos]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;tcost[i]&gt;&gt;mget[i];</span><br><span class="line">    dfs(<span class="number">1</span>,t,<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -440,7 +445,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2020/02/19/cong-ji-yi-hua-sou-suo-sou-suo-dao-dpdong-tai-gui-hua/" title="从记忆化搜索到DP（动态规划）">http://yoursite.com/2020/02/19/cong-ji-yi-hua-sou-suo-sou-suo-dao-dpdong-tai-gui-hua/</a>
+    <a href="http://yuygfgg.tk/2020/02/19/cong-ji-yi-hua-sou-suo-sou-suo-dao-dpdong-tai-gui-hua/" title="从记忆化搜索到DP（动态规划）">http://yuygfgg.tk/2020/02/19/cong-ji-yi-hua-sou-suo-sou-suo-dao-dpdong-tai-gui-hua/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -561,7 +566,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -584,6 +589,22 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/zhanglinquan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:yuygfgg@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
