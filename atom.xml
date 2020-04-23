@@ -38,6 +38,27 @@
   </entry>
   
   <entry>
+    <title>题解 CF490A 【Team Olympiad】</title>
+    <link href="https://www.yuygfgg.ml/2020/04/23/solution-CF490A%20/"/>
+    <id>https://www.yuygfgg.ml/2020/04/23/solution-CF490A%20/</id>
+    <published>2020-04-23T12:35:30.000Z</published>
+    <updated>2020-04-23T12:36:33.596Z</updated>
+    
+    <content type="html"><![CDATA[<p>思路：输入x，就在对应的桶+1，然后去一个尽可能大的长度，但需要满足三个桶都有这么多。</p><a id="more"></a><p>发现洛谷题解里啥vector,队列都来了，正宗的用来干这事的map表示:喵喵喵？</p><p>所以，我决定写一篇map题解</p><p>由于可能键值会重复（我也不确定qwq），所以用multimap</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> cnt1,cnt2,cnt3,n,x;</span><br><span class="line"><span class="built_in">multimap</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; num1,num2,num3;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">        <span class="comment">//分别找对应的桶+1</span></span><br><span class="line"><span class="keyword">if</span>(x==<span class="number">1</span>)&#123;</span><br><span class="line">num1.insert(make_pair(++cnt1,i));<span class="comment">//没有重载[]，这是标准插入方法</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">if</span>(x==<span class="number">2</span>)&#123;</span><br><span class="line">num2.insert(make_pair(++cnt2,i));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">if</span>(x==<span class="number">3</span>)&#123;</span><br><span class="line">num3.insert(make_pair(++cnt3,i));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> ans=min(cnt1,min(cnt2,cnt3));<span class="comment">//找出有几组</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);<span class="comment">//输出组数</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=ans;i++)&#123;<span class="comment">//输出位置</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;num1.find(i)-&gt;second&lt;&lt;<span class="string">" "</span>&lt;&lt;num2.find(i)-&gt;second&lt;&lt;<span class="string">" "</span>&lt;&lt;num3.find(i)-&gt;second&lt;&lt;<span class="built_in">endl</span>;/没有重载[]，这是标准输出方法</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;思路：输入x，就在对应的桶+1，然后去一个尽可能大的长度，但需要满足三个桶都有这么多。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="题解" scheme="https://www.yuygfgg.ml/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>题解 CF412C 【Pattern】</title>
     <link href="https://www.yuygfgg.ml/2020/04/17/solution-cf412c/"/>
     <id>https://www.yuygfgg.ml/2020/04/17/solution-cf412c/</id>
