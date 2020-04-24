@@ -227,12 +227,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-globe">
+        <li class="menu-item menu-item-线路切换">
           <a href="/sw/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-sw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-globe"></i> <br />
             
-            globe
+            线路切换
           </a>
         </li>
       
@@ -382,12 +382,10 @@
 </li>
 <li><p>输入下方的这段代码。</p>
 <a id="more"></a>
-
 </li>
 </ol>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">switchMode('my');</span><br><span class="line"><span class="function">function <span class="title">load</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	console.log('page ' + feedPage);</span><br><span class="line">	$.get(<span class="string">"/feed/"</span> + feedMode + <span class="string">"?page="</span> + feedPage, function (resp) &#123;</span><br><span class="line">		$feed.append(resp);</span><br><span class="line">		$(<span class="string">"#feed-more"</span>).children(<span class="string">"a"</span>).text(<span class="string">"点击查看更多..."</span>)</span><br><span class="line">		$(<span class="string">"[name=feed-delete]"</span>).click(function () &#123;</span><br><span class="line">			$.post("/api/feed/delete/" + $(this).attr('data-feed-id'), function () &#123;</span><br><span class="line">				switchMode('all');</span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;); feedPage++;</span><br><span class="line">		if (resp.indexOf('没有更多动态了') != -1) console.log('finished');</span><br><span class="line">		<span class="keyword">else</span> setTimeout(load, <span class="number">200</span>);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br><span class="line">setTimeout(load, <span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
+<ol>
 <li><p>接着回车 <code>enter</code> 即可。</p>
 </li>
 <li><p>马上会出现一大串的数字，慢慢等待 <code>Page</code> 闪完后出现 <code>finish</code>。</p>
@@ -395,8 +393,7 @@
 </ol>
 <p>接着输入以下代码：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var l =  $('#feed &gt; li &gt; div.am-comment-main &gt; header &gt; div &gt; a:nth-child(2)');</span><br><span class="line"><span class="function">function <span class="title">f</span><span class="params">(i)</span> </span>&#123;</span><br><span class="line">$ .post("/api/feed/delete/"+ $(l[i]).attr('data-feed-id'), function() &#123;</span><br><span class="line">console.<span class="built_in">log</span>(i);</span><br><span class="line"><span class="keyword">if</span>(i&lt;l.length<span class="number">-1</span>)setTimeout(`f($&#123;i+<span class="number">1</span>&#125;)`,<span class="number">200</span>);</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
+<ol>
 <li>如果出现 <code>503</code> 界面重新再次<strong>重复上述过程</strong>。</li>
 </ol>
 <p>直到删完为止，重新加载整个界面，建议重启浏览器。</p>
@@ -678,7 +675,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共6.2k字</span>
+  <span class="post-count">博客全站共6k字</span>
 </div>
         
 <div class="busuanzi-count">
