@@ -33,7 +33,7 @@
     <url>/2020/05/04/vscode-macos/</url>
     <content><![CDATA[<p>最近花了两天时间配置了一下VScode，这里简单记一下</p>
 <a id="more"></a>
-<h1 id="macos下VScode的配置"><a href="#macos下VScode的配置" class="headerlink" title="macos下VScode的配置"></a>macos下VScode的配置</h1><h2 id="基操"><a href="#基操" class="headerlink" title="基操"></a>基操</h2><h3 id="为什么选VSCODE、macOS"><a href="#为什么选VSCODE、macOS" class="headerlink" title="为什么选VSCODE、macOS"></a>为什么选VSCODE、macOS</h3><h4 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h4><ul>
+<h2 id="基操"><a href="#基操" class="headerlink" title="基操"></a>基操</h2><h3 id="为什么选VSCODE、macOS"><a href="#为什么选VSCODE、macOS" class="headerlink" title="为什么选VSCODE、macOS"></a>为什么选VSCODE、macOS</h3><h4 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h4><ul>
 <li><p>自带clang++等编译器，无需烦的要死的搞path</p>
 </li>
 <li><p>命令行强大</p>
