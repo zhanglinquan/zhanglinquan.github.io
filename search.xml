@@ -1,58 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>一些小东西4月（已解密）</title>
-    <url>/2020/04/13/some-small-things/</url>
-    <content><![CDATA[<p>以后估计只有这个会更新了吧。。。</p>
-<a id="more"></a>
-<h1 id="2020-4-13-20-11"><a href="#2020-4-13-20-11" class="headerlink" title="2020-4-13 20:11"></a>2020-4-13 20:11</h1><p>reeder坏了两个星期了，肿莫办啊？在莫得RSS人要没了啊！</p>
-<p><img src="https://s1.ax1x.com/2020/04/13/Gvtqwn.png" alt=""></p>
-<h1 id="2020-4-14-16-30"><a href="#2020-4-14-16-30" class="headerlink" title="2020-4-14 16:30"></a>2020-4-14 16:30</h1><p>文化课大爆炸（math 71pts），想死的心都有了</p>
-<h1 id="2020-4-14-22-30"><a href="#2020-4-14-22-30" class="headerlink" title="2020-4-14 22:30"></a>2020-4-14 22:30</h1><p>迷茫</p>
-<h1 id="2020-4-16-18-30"><a href="#2020-4-16-18-30" class="headerlink" title="2020-4-16 18:30"></a>2020-4-16 18:30</h1><p>博客一直爆炸，修不好。。。</p>
-<h1 id="2020-4-17-21-20"><a href="#2020-4-17-21-20" class="headerlink" title="2020-4-17 21:20"></a>2020-4-17 21:20</h1><p>修好了</p>
-<h1 id="2020-4-18-11-10"><a href="#2020-4-18-11-10" class="headerlink" title="2020-4-18 11:10"></a>2020-4-18 11:10</h1><p><img src="https://gistcdn.githack.com/sjx233/c112365dfa7c0d7a0f78f2294e26fa87/raw/fa488e3b412e01bbcac72409b047eb06d3e18833/benben-hot-words.svg" alt=""></p>
-<p>)</p>
-<h1 id="2020-4-19-13-49"><a href="#2020-4-19-13-49" class="headerlink" title="2020-4-19 13:49"></a>2020-4-19 13:49</h1><p><img src="https://i.loli.net/2019/10/22/V5IRytciuMTBEPD.gif" alt=""></p>
-<h1 id="2020-4-22-21-10"><a href="#2020-4-22-21-10" class="headerlink" title="2020-4-22 21:10"></a>2020-4-22 21:10</h1><p>可怜的创智。。。</p>
-<blockquote>
-<p>Gitee Gitlab Github 所有开源社区的全部是代码清空并销号</p>
-<p>Twitter Ins FB <del>LG</del> 所有社交平台的全部是瞎改密码然后销号</p>
-<p>Google Microsoft 账号也被销毁</p>
-<p>还有貌似他的blog也被毁了</p>
-</blockquote>
-<p><a href="https://www.code004.ml/posts/about-chuangzhi-a-party-of-jfca/#more" target="_blank" rel="noopener">More</a></p>
-<h1 id="2020-4-27-01-10"><a href="#2020-4-27-01-10" class="headerlink" title="2020-4-27 01:10"></a>2020-4-27 01:10</h1><p>暂别。。再见OI，我还会回来的</p>
-]]></content>
-      <tags>
-        <tag>其他</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>洛谷管理真名</title>
-    <url>/2020/05/04/LUOGU/</url>
-    <content><![CDATA[<p>专业人肉100年</p>
-<a id="more"></a>
-<p>kkksc03真名：汪楚奇 男 约1995</p>
-<p>lin_toto真名：林方正 约1999</p>
-<p>StudyingFather真名：张书豪 男 约2003</p>
-<p>chen_zhe真名：陈哲 男 约2004</p>
-<p>xht37真名：徐皓天 男 约2003</p>
-<p>NaCly_Fish真名：李峻枫 男 约2002</p>
-<p>zhouwc真名：周炜程 男 约2003</p>
-<p>noip真名：李欣隆 男 2001.3.11</p>
-<p>ComeIntoPower真名：袁方舟 男 约2001</p>
-<p>CYJian真名：陈胤戬 男 约2003</p>
-<p>FlierKing真名：周永隆 男 约2000</p>
-<p>zcysky真名：周辰宇 男 约2001</p>
-<p>soha真名：金少海 ? 约2000</p>
-<p>darkflames真名：？ 约1990（?）</p>
-]]></content>
-      <tags>
-        <tag>洛谷</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>macos下VScode的配置</title>
     <url>/2020/05/04/vscode-macos/</url>
     <content><![CDATA[<p>最近花了两天时间配置了一下VScode，这里简单记一下</p>
@@ -141,9 +89,81 @@
 <li><p>调试<a href="https://imgchr.com/i/YCis9f" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/04/YCis9f.png" alt="YCis9f.png"></a></p>
 </li>
 </ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><p><a href="https://blog.csdn.net/justidle/article/details/105157419?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2" target="_blank" rel="noopener">https://blog.csdn.net/justidle/article/details/105157419?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2</a></p>
+</li>
+<li><p><a href="https://www.luogu.com.cn/blog/crab-in-northeast/great-features-and-plugins-for-vscode" target="_blank" rel="noopener">https://www.luogu.com.cn/blog/crab-in-northeast/great-features-and-plugins-for-vscode</a></p>
+</li>
+<li><p><a href="https://www.luogu.com.cn/blog/GNAQ/VSC-guide" target="_blank" rel="noopener">https://www.luogu.com.cn/blog/GNAQ/VSC-guide</a></p>
+</li>
+</ul>
 ]]></content>
       <tags>
         <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些小东西4月（已解密）</title>
+    <url>/2020/04/13/some-small-things/</url>
+    <content><![CDATA[<p>以后估计只有这个会更新了吧。。。</p>
+<a id="more"></a>
+<h1 id="2020-4-13-20-11"><a href="#2020-4-13-20-11" class="headerlink" title="2020-4-13 20:11"></a>2020-4-13 20:11</h1><p>reeder坏了两个星期了，肿莫办啊？在莫得RSS人要没了啊！</p>
+<p><img src="https://s1.ax1x.com/2020/04/13/Gvtqwn.png" alt=""></p>
+<h1 id="2020-4-14-16-30"><a href="#2020-4-14-16-30" class="headerlink" title="2020-4-14 16:30"></a>2020-4-14 16:30</h1><p>文化课大爆炸（math 71pts），想死的心都有了</p>
+<h1 id="2020-4-14-22-30"><a href="#2020-4-14-22-30" class="headerlink" title="2020-4-14 22:30"></a>2020-4-14 22:30</h1><p>迷茫</p>
+<h1 id="2020-4-16-18-30"><a href="#2020-4-16-18-30" class="headerlink" title="2020-4-16 18:30"></a>2020-4-16 18:30</h1><p>博客一直爆炸，修不好。。。</p>
+<h1 id="2020-4-17-21-20"><a href="#2020-4-17-21-20" class="headerlink" title="2020-4-17 21:20"></a>2020-4-17 21:20</h1><p>修好了</p>
+<h1 id="2020-4-18-11-10"><a href="#2020-4-18-11-10" class="headerlink" title="2020-4-18 11:10"></a>2020-4-18 11:10</h1><p><img src="https://gistcdn.githack.com/sjx233/c112365dfa7c0d7a0f78f2294e26fa87/raw/fa488e3b412e01bbcac72409b047eb06d3e18833/benben-hot-words.svg" alt=""></p>
+<p>)</p>
+<h1 id="2020-4-19-13-49"><a href="#2020-4-19-13-49" class="headerlink" title="2020-4-19 13:49"></a>2020-4-19 13:49</h1><p><img src="https://i.loli.net/2019/10/22/V5IRytciuMTBEPD.gif" alt=""></p>
+<h1 id="2020-4-22-21-10"><a href="#2020-4-22-21-10" class="headerlink" title="2020-4-22 21:10"></a>2020-4-22 21:10</h1><p>可怜的创智。。。</p>
+<blockquote>
+<p>Gitee Gitlab Github 所有开源社区的全部是代码清空并销号</p>
+<p>Twitter Ins FB <del>LG</del> 所有社交平台的全部是瞎改密码然后销号</p>
+<p>Google Microsoft 账号也被销毁</p>
+<p>还有貌似他的blog也被毁了</p>
+</blockquote>
+<p><a href="https://www.code004.ml/posts/about-chuangzhi-a-party-of-jfca/#more" target="_blank" rel="noopener">More</a></p>
+<h1 id="2020-4-27-01-10"><a href="#2020-4-27-01-10" class="headerlink" title="2020-4-27 01:10"></a>2020-4-27 01:10</h1><p>暂别。。再见OI，我还会回来的</p>
+]]></content>
+      <tags>
+        <tag>其他</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cz_ak_ioi</title>
+    <url>/2020/05/05/cz-ak-ioi/</url>
+    <content><![CDATA[<p>学【老虎叫】语</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">Chen Zhe AKs IOI.</span><br><span class="line">Chen Zhe AKed IOI.</span><br><span class="line">Chen Zhe will AK IOI.</span><br><span class="line">Chen Zhe would AK IOI.</span><br><span class="line">Chen Zhe is AKing IOI.</span><br><span class="line">Chen Zhe was AKing IOI.</span><br><span class="line">Chen Zhe will be AKing IOI.</span><br><span class="line">Chen Zhe would be AKing IOI.</span><br><span class="line">Chen Zhe has AKed IOI.</span><br><span class="line">Chen Zhe had AKed IOI.</span><br><span class="line">Chen Zhe will have AKed IOI.</span><br><span class="line">Chen Zhe would have AKed IOI.</span><br><span class="line">Chen Zhe has been AKing IOI.</span><br><span class="line">Chen Zhe had been AKing IOI.</span><br><span class="line">Chen Zhe will have been AKing IOI.</span><br><span class="line">Chen Zhe would have been AKing IOI.</span><br><span class="line">IOI is AKed by Chen Zhe.</span><br><span class="line">IOI was AKed by Chen Zhe.</span><br><span class="line">IOI will be AKed by Chen Zhe.</span><br><span class="line">IOI would be AKed by Chen Zhe.</span><br><span class="line">IOI is being AKed by Chen Zhe.</span><br><span class="line">IOI was being AKed by Chen Zhe.</span><br><span class="line">IOI will be being AKed by Chen Zhe.</span><br><span class="line">IOI would be being AKed by Chen Zhe.</span><br><span class="line">IOI has been AKed by Chen Zhe.</span><br><span class="line">IOI had been AKed by Chen Zhe.</span><br><span class="line">IOI will have been AKed by Chen Zhe.</span><br><span class="line">IOI would have been AKed by Chen Zhe.</span><br><span class="line">IOI has been being AKed by Chen Zhe.</span><br><span class="line">IOI had been being AKed by Chen Zhe.</span><br><span class="line">IOI will have been being AKed by Chen Zhe.</span><br><span class="line">IOI would have been being AKed by Chen Zhe.</span><br><span class="line">Chen Zhe can AK IOI.</span><br><span class="line">Chen Zhe could AK IOI.</span><br><span class="line">Chen Zhe must AK IOI.</span><br><span class="line">Chen Zhe has to AK IOI.</span><br><span class="line">Chen Zhe had to AK IOI.</span><br><span class="line">Chen Zhe will have to AK IOI.</span><br><span class="line">Chen Zhe would have to AK IOI.</span><br><span class="line">Chen Zhe has had to AK IOI.</span><br><span class="line">Chen Zhe had had to AK IOI.</span><br><span class="line">Chen Zhe will have had to AK IOI.</span><br><span class="line">Chen Zhe would have had to AK IOI.</span><br><span class="line">Chen Zhe need to AK IOI.</span><br><span class="line">Chen Zhe dares to AK IOI.</span><br><span class="line">Chen Zhe used to AK IOI.</span><br><span class="line">Chen Zhe is used to AKing IOI.</span><br><span class="line">Chen Zhe is bound to AK IOI.</span><br><span class="line">IOI can be AKed by Chen Zhe.</span><br><span class="line">IOI could be AKed by Chen Zhe.</span><br><span class="line">IOI must be AKed by IOI.</span><br><span class="line">IOI has to be AKed by Chen Zhe.</span><br><span class="line">IOI had to be AKed by Chen Zhe.</span><br><span class="line">IOI will have to be AKed by Chen Zhe.</span><br><span class="line">IOI would have to be AKed by Chen Zhe.</span><br><span class="line">IOI has had to be AKed by Chen Zhe.</span><br><span class="line">IOI had had to be AKed by Chen Zhe.</span><br><span class="line">IOI will have had to be AKed by Chen Zhe.</span><br><span class="line">IOI would have had to be AKed by Chen Zhe.</span><br><span class="line">IOI need to be AKed by Chen Zhe.</span><br><span class="line">IOI dares to be AKed by Chen Zhe.</span><br><span class="line">IOI used to be AKed by Chen Zhe.</span><br><span class="line">IOI is used to being AKed by Chen Zhe.</span><br><span class="line">IOI is bound to be AKed by Chen Zhe.</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>洛谷</tag>
+        <tag>恶搞</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>洛谷管理真名</title>
+    <url>/2020/05/04/LUOGU/</url>
+    <content><![CDATA[<p>专业人肉100年</p>
+<a id="more"></a>
+<p>kkksc03真名：汪楚奇 男 约1995</p>
+<p>lin_toto真名：林方正 约1999</p>
+<p>StudyingFather真名：张书豪 男 约2003</p>
+<p>chen_zhe真名：陈哲 男 约2004</p>
+<p>xht37真名：徐皓天 男 约2003</p>
+<p>NaCly_Fish真名：李峻枫 男 约2002</p>
+<p>zhouwc真名：周炜程 男 约2003</p>
+<p>noip真名：李欣隆 男 2001.3.11</p>
+<p>ComeIntoPower真名：袁方舟 男 约2001</p>
+<p>CYJian真名：陈胤戬 男 约2003</p>
+<p>FlierKing真名：周永隆 男 约2000</p>
+<p>zcysky真名：周辰宇 男 约2001</p>
+<p>soha真名：金少海 ? 约2000</p>
+<p>darkflames真名：？ 约1990（?）</p>
+]]></content>
+      <tags>
+        <tag>洛谷</tag>
       </tags>
   </entry>
   <entry>
