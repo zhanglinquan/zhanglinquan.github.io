@@ -6,7 +6,7 @@
     <content><![CDATA[<p>最近花了两天时间配置了一下VScode，这里简单记一下</p>
 <a id="more"></a>
 <h2 id="基操"><a href="#基操" class="headerlink" title="基操"></a>基操</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><h4 id="用coderunner插件"><a href="#用coderunner插件" class="headerlink" title="用coderunner插件"></a>用coderunner插件</h4><ul>
-<li><p>点左边栏里<a href="https://imgchr.com/i/YCiaBd" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/04/YCiaBd.png" alt="YCiaBd.png"></a>，在输入框搜索coderunner，安装，点左上即可运行</p>
+<li><p>点左边栏里<img src="https://s1.ax1x.com/2020/05/04/YCiaBd.png" alt="YCiaBd.png">，在输入框搜索coderunner，安装，点左上即可运行</p>
 </li>
 <li><p>为了更好的输入，打开设置（按f1搜settings），搜索run in terminal，打上勾即可<img src="https://s1.ax1x.com/2020/05/04/YCFjsg.png" alt="YCFjsg.png"></p>
 </li>
@@ -16,7 +16,7 @@
 </ul>
 <h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p>我不明白网上讲那么复杂干啥，不就是c,v嘛（（</p>
 <h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><ul>
-<li>在当前文件夹中新建一个叫.vscode的文件夹（不要在finder里建，直接在左边栏摁<a href="https://imgchr.com/i/YCiUnH" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/04/YCiUnH.png" alt="YCiUnH.png"></a>建）</li>
+<li>在当前文件夹中新建一个叫.vscode的文件夹（不要在finder里建，直接在左边栏摁<img src="https://s1.ax1x.com/2020/05/04/YCiUnH.png" alt="YCiUnH.png">建）</li>
 <li>在.vscode里建这些文件</li>
 </ul>
 <p><img src="https://s1.ax1x.com/2020/05/04/YCFHit.png" alt="YCFHit.png"></p>
@@ -52,7 +52,7 @@
 <li>复制光标所在行 只需双击当前行并按下cmd+C即可。</li>
 <li>去掉行尾空格 cmd+K 然后 cmd+X</li>
 <li>切换行注释(可多行) cmd+/</li>
-<li>代码缩进 cmd+[$\space$或 cmd+]</li>
+<li>代码缩进 cmd+[ 或 cmd+]</li>
 <li>当前行上下移动 Alt+↑↓</li>
 <li>当前行后插入一行 cmd+Enter</li>
 <li>当前行前插入一行 cmd+Shift+Enter</li>
@@ -68,7 +68,7 @@
 <li><p>大纲</p>
 </li>
 </ul>
-<p><a href="https://imgchr.com/i/YCidHA" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/04/YCidHA.png" alt="YCidHA.png"></a></p>
+<p><img src="https://s1.ax1x.com/2020/05/04/YCidHA.png" alt="YCidHA.png"></p>
 <ul>
 <li>代码提示</li>
 </ul>
@@ -84,11 +84,11 @@
 <h4 id="按F1搜索user-sn-按enter，选C-json，按enter编辑"><a href="#按F1搜索user-sn-按enter，选C-json，按enter编辑" class="headerlink" title="按F1搜索user sn 按enter，选C++.json，按enter编辑"></a>按F1搜索<code>user sn</code><img src="https://s1.ax1x.com/2020/05/09/YloMFJ.png" alt="YloMFJ.png"> 按enter，选C++.json，按enter编辑</h4><p>e.g</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">     <span class="attr">"sc"</span>: &#123;</span><br><span class="line">        <span class="attr">"prefix"</span>: <span class="string">"sc"</span>,<span class="comment">//“召唤”键</span></span><br><span class="line">        <span class="attr">"body"</span>: [<span class="comment">//$(num)为光标路径，结尾必须有一个</span></span><br><span class="line">            <span class="string">"#include&lt;bits/stdc++.h&gt;"</span>,</span><br><span class="line">            <span class="string">"using namespace std;\n$1"</span>,</span><br><span class="line">            <span class="string">"int main()&#123;\n\t$2"</span>,</span><br><span class="line">            <span class="string">"&#125;"</span>,</span><br><span class="line">            <span class="string">"$3"</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">"description"</span>: <span class="string">"start"</span><span class="comment">//描述</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h2><p>我装了这些插件，仅供参考</p>
-<p><a href="https://imgchr.com/i/YCi0AI" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/04/YCi0AI.png" alt="YCi0AI.png"></a></p>
+<p><img src="https://s1.ax1x.com/2020/05/04/YCi0AI.png" alt="YCi0AI.png">]</p>
 <h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><ul>
 <li><p>编辑<img src="https://s1.ax1x.com/2020/05/04/YCFQKg.png" alt="YCFQKg.png"></p>
 </li>
-<li><p>调试<a href="https://imgchr.com/i/YCis9f" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/04/YCis9f.png" alt="YCis9f.png"></a></p>
+<li><p>调试<img src="https://s1.ax1x.com/2020/05/04/YCis9f.png" alt="YCis9f.png"></p>
 </li>
 </ul>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
