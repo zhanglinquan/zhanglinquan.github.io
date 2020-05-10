@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="洛谷,题解," />
+  <meta name="keywords" content="学习笔记," />
 
 
 
@@ -83,18 +83,17 @@
 
 
 
-<meta name="description" content="思路：贪心，找单价最便宜的超市买即可 用set从小到大排序">
+<meta name="description" content="目录 记忆化搜索是啥  记忆化搜索和动态规划有啥关系  动态规划做法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="题解 CF919A 【Supermarket】">
-<meta property="og:url" content="https://yuygfgg.ml/2020/04/03/ti-jie-cf919a-supermarket/index.html">
+<meta property="og:title" content="从记忆化搜索到DP（动态规划）">
+<meta property="og:url" content="https://yuygfgg.ml/2020/02/19/dp/index.html">
 <meta property="og:site_name" content="yuygfgg&#39;s blog">
-<meta property="og:description" content="思路：贪心，找单价最便宜的超市买即可 用set从小到大排序">
+<meta property="og:description" content="目录 记忆化搜索是啥  记忆化搜索和动态规划有啥关系  动态规划做法">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-03T12:45:37.000Z">
-<meta property="article:modified_time" content="2020-05-02T02:41:01.622Z">
+<meta property="article:published_time" content="2020-02-19T13:01:57.000Z">
+<meta property="article:modified_time" content="2020-04-13T12:46:05.210Z">
 <meta property="article:author" content="yuygfgg">
-<meta property="article:tag" content="洛谷">
-<meta property="article:tag" content="题解">
+<meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
 
 
@@ -125,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="https://yuygfgg.ml/2020/04/03/ti-jie-cf919a-supermarket/"/>
+  <link rel="canonical" href="https://yuygfgg.ml/2020/02/19/dp/"/>
 
 
 
@@ -143,7 +142,7 @@
 
 
 
-  <title>题解 CF919A 【Supermarket】 | yuygfgg's blog</title>
+  <title>从记忆化搜索到DP（动态规划） | yuygfgg's blog</title>
   
 
 
@@ -304,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuygfgg.ml/2020/04/03/ti-jie-cf919a-supermarket/">
+    <link itemprop="mainEntityOfPage" href="https://yuygfgg.ml/2020/02/19/dp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yuygfgg">
@@ -321,7 +320,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">题解 CF919A 【Supermarket】</h2>
+          <h2 class="post-title" itemprop="name headline">从记忆化搜索到DP（动态规划）</h2>
         
 
         <div class="post-meta">
@@ -334,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-03T20:45:37+08:00">
-                2020-04-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-19T21:01:57+08:00">
+                2020-02-19
               </time>
             
 
@@ -377,10 +376,63 @@
       
 
       
-        <p>思路：贪心，找单价最便宜的超市买即可</p>
-<p>用set从小到大排序</p>
+        <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
+<li><p>记忆化搜索是啥</p>
+</li>
+<li><p>记忆化搜索和动态规划有啥关系</p>
+</li>
+<li><p>动态规划做法</p>
 <a id="more"></a>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">long</span> <span class="keyword">double</span>&gt; c;<span class="comment">//自动从小到大排序</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m,n;</span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;m&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">double</span> tmp=((<span class="keyword">long</span> <span class="keyword">double</span>)a/b);</span><br><span class="line">        c.insert(tmp*n*<span class="number">1.0</span>);<span class="comment">//插入（*1.0用来强制类型转换，否则插入set的数是向下取整的int）</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">long</span> <span class="keyword">double</span>&gt;::iterator it=c.begin();<span class="comment">//最便宜超市的单价</span></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">10</span>)&lt;&lt;*it&lt;&lt;<span class="built_in">endl</span>;<span class="comment">//保留十位</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="1-记忆化搜索是啥（引入"><a href="#1-记忆化搜索是啥（引入" class="headerlink" title="1. 记忆化搜索是啥（引入"></a>1. 记忆化搜索是啥（引入</h1><p>好，就以采药这道题为例，我不会动态规划，只会搜索，我就会直接写一个粗暴的 DFS :</p>
+</li>
+</ul>
+<p>注: 为了方便食用, 本文中所有代码省略头文件<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n,t;</span><br><span class="line"><span class="keyword">int</span> tcost[<span class="number">103</span>],mget[<span class="number">103</span>];</span><br><span class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">int</span> tleft,<span class="keyword">int</span> tans)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(tleft&lt;<span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span>(pos==n+<span class="number">1</span>)&#123;</span><br><span class="line">        ans=max(ans,tans);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(pos+<span class="number">1</span>,tleft,tans);</span><br><span class="line">    dfs(pos+<span class="number">1</span>,tleft-tcost[pos],tans+mget[pos]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;tcost[i]&gt;&gt;mget[i];</span><br><span class="line">    dfs(<span class="number">1</span>,t,<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>30pts</p>
+<p>然后我心血来潮, 想不借助任何 “外部变量”(就是 dfs 函数外且 值随 dfs 运行而改变的变量 ), 比如 ans</p>
+<p>把 ans 删了之后就有一个问题: 我们拿什么来记录答案?</p>
+<p>答案很简单:</p>
+<p>返回值!</p>
+<p>此时 dfs(pos,tleft) 返回在时间 tleft内采集 后 pos 个草药, 能获得的最大收益</p>
+<p>不理解就看看代码吧:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n,time;</span><br><span class="line"><span class="keyword">int</span> tcost[<span class="number">103</span>],mget[<span class="number">103</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">int</span> tleft)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pos==n+<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> dfs1,dfs2=-INF;</span><br><span class="line">    dfs1=dfs(pos+<span class="number">1</span>,tleft);</span><br><span class="line">    <span class="keyword">if</span>( tleft&gt;tcost[pos] )</span><br><span class="line">        dfs2=dfs(pos+<span class="number">1</span>,tleft-tcost[pos])+mget[pos];</span><br><span class="line">    <span class="keyword">return</span> max(dfs1,dfs2);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;time&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;tcost[i]&gt;&gt;mget[i];</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;dfs(<span class="number">1</span>,time)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><del>还是30pts，我太难了</del><br>但这个时候, 我们的程序已经不依赖任何外部变量了.</p>
+<p>然后我非常无聊, 将所有 dfs 的返回值都记录下来, 竟然发现……</p>
+<pre><code>震惊, 对于相同的 pos 和 tleft,dfs 的返回值总是相同的!
+</code></pre><p>想一想也不奇怪, 因为我们的 dfs 没有依赖任何外部变量.</p>
+<p>旁白: 像 tcost[103],mget[103] 这种东西不算是外部变量, 因为她们在 dfs 过程中不变.</p>
+<p>然后?</p>
+<p>开个数组 mem , 记录下来每个 dfs(pos,tleft) 的返回值. 刚开始把 mem 中每个值都设成 -1 (代表没访问过). 每次刚刚进入一个 dfs 前(我们的 dfs 是递归调用的嘛), 都检测 mem[pos][tleft]是否为 -1 , 如果是就正常执行并把答案记录到 mem 中, 否则?</p>
+<p>直接返回 mem 中的值!<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n,t;</span><br><span class="line"><span class="keyword">int</span> tcost[<span class="number">103</span>],mget[<span class="number">103</span>];</span><br><span class="line"><span class="keyword">int</span> mem[<span class="number">103</span>][<span class="number">1003</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">int</span> tleft)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(mem[pos][tleft]!=<span class="number">-1</span>) <span class="keyword">return</span> mem[pos][tleft];</span><br><span class="line">    <span class="keyword">if</span>(pos==n+<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> mem[pos][tleft] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> dfs1,dfs2=-INF;</span><br><span class="line">    dfs1 = dfs(pos+<span class="number">1</span>,tleft);</span><br><span class="line">    <span class="keyword">if</span>(tleft&gt;=tcost[pos])</span><br><span class="line">        dfs2=dfs(pos+<span class="number">1</span>,tleft-tcost[pos])+mget[pos];</span><br><span class="line">    <span class="keyword">return</span> mem[pos][tleft]=max(dfs1,dfs2);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(mem,<span class="number">-1</span>,<span class="keyword">sizeof</span>(mem));</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;tcost[i]&gt;&gt;mget[i];</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;dfs(<span class="number">1</span>,t)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>此时 mem 的意义与 dfs 相同：</p>
+<pre><code>在时间 tleft内采集 后 pos 个草药, 能获得的最大收益
+</code></pre><p>这能 ac?</p>
+<p>能. 这就是 “采药” 那题的 AC 代码</p>
+<p>好我们倒腾出了记忆化搜索</p>
+<p>总结一下记忆化搜索是啥:<br>不依赖任何 外部变量，答案以返回值的形式存在, 而不能以参数的形式存在(就是不能将 dfs 定义成 dfs(pos,tleft,nowans ), 这里面的 nowans 不符合要求).</p>
+<p>对于相同一组参数, dfs 返回值总是相同的</p>
+<h1 id="记忆化搜索与动态规划的关系-（分析"><a href="#记忆化搜索与动态规划的关系-（分析" class="headerlink" title="记忆化搜索与动态规划的关系:（分析"></a>记忆化搜索与动态规划的关系:（分析</h1><p>基本是朋 (ji) 友关系</p>
+<p>有人会问: 记忆化搜索难道不是搜索?</p>
+<p>一定程度上来说，她是搜索.但个人认为她更像dp</p>
+<p>其实说白了，记忆化搜索就是dp</p>
+<p>不信你看mem 的意义:</p>
+<p>在时间 tleft 内采集 后 pos 个草药, 能获得的最大收益</p>
+<p>这不就是dp的状态?</p>
+<p>由上面的代码中可以看出:</p>
+<p>dfs(pos,left) = max(dfs(pos+1,tleft-tcost[pos])+mget[pos] , dfs(pos+1,tleft))<br>即为</p>
+<p>mem[pos][tleft] = max(mem[pos+1][tleft-tcost[pos]]+mget[pos] , mem[pos+1][tleft])<br>这不就是dp的状态转移?</p>
+<p>总结一下：</p>
+<pre><code>记忆化搜索和动态规划从根本上来讲就是一个东西,**(印象中)任何一个 dp 方程都能转为记忆化搜索 ，反之亦然（为什么？见下文“体现在”的第四条）
+</code></pre><p>体现在</p>
+<ul>
+<li><p>根据记忆化搜索的参数可以直接得到dp的状态，反之亦然</p>
+</li>
+<li><p>根据记忆化搜索的递归关系可以写出状态转移方程，这个方程可以直接写出循环式的dp，只不过是反的(想想为什么？)，反之亦然</p>
+</li>
+<li><p>大部分记忆化搜索时空复杂度与 不加优化的 dp 完全相同</p>
+</li>
+<li><p><strong>最重要的一点：二者思想类似！！ 核心思想均为：利用对于相同参数答案相同的特性，对于相同的参数（循环式的dp体现为数组下标），记录其答案，免去重复计算，从而起到优化时间复杂度的作用。这，便是二者的精髓。</strong></p>
+</li>
+</ul>
+<p>建议好好想想第四条。记住，学一个算法，一定要理解他的精髓。</p>
+<p>举个栗子:</p>
+<p>dp[i][j][k] = dp[i+1][j+1][k-a[j]] + dp[i+1][j][k]<br>转为<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    边界条件</span><br><span class="line">    <span class="keyword">if</span>( mem[i][j][k]!=<span class="number">-1</span>) <span class="keyword">return</span> mem[i][j][k];</span><br><span class="line">    <span class="keyword">return</span> mem[i][j][k]=dfs(i+<span class="number">1</span>,j+<span class="number">1</span>,k-a[j])+dfs(i+<span class="number">1</span>,j,k);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(mem,<span class="number">-1</span>,<span class="keyword">sizeof</span>(mem));</span><br><span class="line">    读入</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;dfs(<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>二者满足上面提到的所有关系</p>
+<h1 id="dp做法"><a href="#dp做法" class="headerlink" title="dp做法"></a>dp做法</h1><p><del>上面转移方程都出来了，还不会？？</del><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">1001</span>],n,t,v[<span class="number">101</span>],w[<span class="number">101</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;w[i]&gt;&gt;v[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=t;j&gt;=w[i];j--) &#123;</span><br><span class="line">            f[j]=max(f[j-w[i]]+v[i], f[j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;f[t];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -401,7 +453,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://yuygfgg.ml/2020/04/03/ti-jie-cf919a-supermarket/" title="题解 CF919A 【Supermarket】">https://yuygfgg.ml/2020/04/03/ti-jie-cf919a-supermarket/</a>
+    <a href="https://yuygfgg.ml/2020/02/19/dp/" title="从记忆化搜索到DP（动态规划）">https://yuygfgg.ml/2020/02/19/dp/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -416,9 +468,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E6%B4%9B%E8%B0%B7/" rel="tag"># 洛谷</a>
-          
-            <a href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag"># 题解</a>
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
           
         </div>
       
@@ -431,8 +481,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/03/ti-jie-sp11515-busyman-i-am-very-busy/" rel="next" title="题解 SP11515 【BUSYMAN - I AM VERY BUSY】">
-                <i class="fa fa-chevron-left"></i> 题解 SP11515 【BUSYMAN - I AM VERY BUSY】
+              <a href="/2019/10/25/dg/" rel="next" title="递归">
+                <i class="fa fa-chevron-left"></i> 递归
               </a>
             
           </div>
@@ -441,8 +491,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/04/ti-jie-cf149a-business-trip/" rel="prev" title="题解 CF149A 【Business trip】">
-                题解 CF149A 【Business trip】 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/03/05/first-project/" rel="prev" title="第一次做工程的成果">
+                第一次做工程的成果 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -495,8 +545,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -592,6 +651,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-记忆化搜索是啥（引入"><span class="nav-number">2.</span> <span class="nav-text">1. 记忆化搜索是啥（引入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#记忆化搜索与动态规划的关系-（分析"><span class="nav-number">3.</span> <span class="nav-text">记忆化搜索与动态规划的关系:（分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dp做法"><span class="nav-number">4.</span> <span class="nav-text">dp做法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

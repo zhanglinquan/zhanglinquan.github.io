@@ -83,15 +83,15 @@
 
 
 
-<meta name="description" content="思路：贪心。要让浇水的月份最少，就要让每个浇水月收益最大，所以做法是先将每个月的收益从大到小排序，尽量在收益大的月份浇水。 用multiset排序，每次取第i大累加直到满足要求即可">
+<meta name="description" content="这题是特别水的贪心，可以用自动排序的set实现 主要思路：将所有活动按结束时间从小到大排序，能进行活动就进行，遇到不能的就结束">
 <meta property="og:type" content="article">
-<meta property="og:title" content="题解 CF149A 【Business trip】">
-<meta property="og:url" content="https://yuygfgg.ml/2020/04/04/ti-jie-cf149a-business-trip/index.html">
+<meta property="og:title" content="题解 SP11515 【BUSYMAN - I AM VERY BUSY】">
+<meta property="og:url" content="https://yuygfgg.ml/2020/04/03/solution-sp11515/index.html">
 <meta property="og:site_name" content="yuygfgg&#39;s blog">
-<meta property="og:description" content="思路：贪心。要让浇水的月份最少，就要让每个浇水月收益最大，所以做法是先将每个月的收益从大到小排序，尽量在收益大的月份浇水。 用multiset排序，每次取第i大累加直到满足要求即可">
+<meta property="og:description" content="这题是特别水的贪心，可以用自动排序的set实现 主要思路：将所有活动按结束时间从小到大排序，能进行活动就进行，遇到不能的就结束">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-04T01:42:09.000Z">
-<meta property="article:modified_time" content="2020-05-02T02:40:46.077Z">
+<meta property="article:published_time" content="2020-04-03T06:35:01.000Z">
+<meta property="article:modified_time" content="2020-04-13T12:48:43.519Z">
 <meta property="article:author" content="yuygfgg">
 <meta property="article:tag" content="洛谷">
 <meta property="article:tag" content="题解">
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="https://yuygfgg.ml/2020/04/04/ti-jie-cf149a-business-trip/"/>
+  <link rel="canonical" href="https://yuygfgg.ml/2020/04/03/solution-sp11515/"/>
 
 
 
@@ -143,7 +143,7 @@
 
 
 
-  <title>题解 CF149A 【Business trip】 | yuygfgg's blog</title>
+  <title>题解 SP11515 【BUSYMAN - I AM VERY BUSY】 | yuygfgg's blog</title>
   
 
 
@@ -304,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuygfgg.ml/2020/04/04/ti-jie-cf149a-business-trip/">
+    <link itemprop="mainEntityOfPage" href="https://yuygfgg.ml/2020/04/03/solution-sp11515/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yuygfgg">
@@ -321,7 +321,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">题解 CF149A 【Business trip】</h2>
+          <h2 class="post-title" itemprop="name headline">题解 SP11515 【BUSYMAN - I AM VERY BUSY】</h2>
         
 
         <div class="post-meta">
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-04T09:42:09+08:00">
-                2020-04-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-03T14:35:01+08:00">
+                2020-04-03
               </time>
             
 
@@ -377,10 +377,11 @@
       
 
       
-        <p>思路：贪心。要让浇水的月份最少，就要让每个浇水月收益最大，所以做法是先将每个月的收益从大到小排序，尽量在收益大的月份浇水。</p>
-<p>用multiset排序，每次取第i大累加直到满足要求即可</p>
+        <p>这题是特别水的贪心，可以用自动排序的set实现</p>
+<p>主要思路：将所有活动按结束时间从小到大排序，能进行活动就进行，遇到不能的就结束</p>
 <a id="more"></a>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,tmp,d=<span class="number">0</span>,s=<span class="number">0</span>,k;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;k;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;tmp;<span class="comment">//输入临时变量再插入</span></span><br><span class="line">		a.insert(tmp);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(k==<span class="number">0</span>)&#123;<span class="comment">//目标为0的话直接输出0</span></span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it=a.end();<span class="comment">//指向最大值的iterator</span></span><br><span class="line">	it--;<span class="comment">//.end()指向的是最大值还要后面一个，所以要--</span></span><br><span class="line">	<span class="keyword">for</span>(;it!=a.begin();it--)&#123;</span><br><span class="line">		d+=*it;</span><br><span class="line">		s++;</span><br><span class="line">		<span class="keyword">if</span>(d&gt;=k)&#123;<span class="comment">//完成</span></span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;s&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	d+=*it;<span class="comment">//如果不补一次循环，第一个元素不会被遍历到</span></span><br><span class="line">	s++;</span><br><span class="line">	<span class="keyword">if</span>(d&gt;=k)&#123;<span class="comment">//完成</span></span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;s&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;<span class="comment">//无法完成目标</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">data</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">cmp</span>&#123;</span><span class="comment">//比较函数类</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> data&amp; x,<span class="keyword">const</span> data&amp; y)</span></span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(x.b==y.b)<span class="comment">//如果结束时间一样就按开始时间排</span></span><br><span class="line">        		<span class="keyword">return</span> x.a&lt;y.a;</span><br><span class="line">    		<span class="keyword">return</span> x.b&lt;y.b;<span class="comment">//否则就按结束时间排</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">set</span>&lt;data,cmp&gt; a;<span class="comment">//自动按比较函数类排序</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,t,ans,last;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	data tmp;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=t;j++)&#123;<span class="comment">//由于空间大小是set自动分配的，只能先输入临时变量再通过insert函数插入</span></span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;tmp.a&gt;&gt;tmp.b;</span><br><span class="line">			a.insert(tmp);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">set</span>&lt;data&gt;::iterator it=a.begin();<span class="comment">//指向开始的迭代器</span></span><br><span class="line">		ans=<span class="number">0</span>;<span class="comment">//初始化</span></span><br><span class="line">		last=INT_MIN;</span><br><span class="line">		<span class="keyword">for</span>(;it!=a.end();it++)&#123;</span><br><span class="line">			<span class="keyword">if</span>((*it).a&gt;=last)&#123;<span class="comment">//来得及</span></span><br><span class="line">				ans++;<span class="comment">//能去的加一</span></span><br><span class="line">				<span class="comment">//cout&lt;&lt;i&lt;&lt;" "&lt;&lt;ans&lt;&lt;"eee"&lt;&lt;(*it).a&lt;&lt;" "&lt;&lt;(*it).b&lt;&lt;endl;</span></span><br><span class="line">				last=(*it).b;<span class="comment">//更新上一次的结束时间</span></span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		a.clear();<span class="comment">//insert会插入，不会覆盖，所以要清空set</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -400,7 +401,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://yuygfgg.ml/2020/04/04/ti-jie-cf149a-business-trip/" title="题解 CF149A 【Business trip】">https://yuygfgg.ml/2020/04/04/ti-jie-cf149a-business-trip/</a>
+    <a href="https://yuygfgg.ml/2020/04/03/solution-sp11515/" title="题解 SP11515 【BUSYMAN - I AM VERY BUSY】">https://yuygfgg.ml/2020/04/03/solution-sp11515/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -430,8 +431,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/03/ti-jie-cf919a-supermarket/" rel="next" title="题解 CF919A 【Supermarket】">
-                <i class="fa fa-chevron-left"></i> 题解 CF919A 【Supermarket】
+              <a href="/2020/04/03/solution-cf230a/" rel="next" title="题解 CF230A 【Dragons】">
+                <i class="fa fa-chevron-left"></i> 题解 CF230A 【Dragons】
               </a>
             
           </div>
@@ -440,8 +441,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/04/ti-jie-at2654-arc078a-splitting-pile/" rel="prev" title="题解 AT2654 【[ARC078A] Splitting Pile】">
-                题解 AT2654 【[ARC078A] Splitting Pile】 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/03/solution-cf919a/" rel="prev" title="题解 CF919A 【Supermarket】">
+                题解 CF919A 【Supermarket】 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
