@@ -83,19 +83,21 @@
 
 
 
-<meta name="description" content="思路：暴力求出所有可能，排序求最小绝对值差。 我用vector存储卡的信息，用set排序">
+<meta name="description" content="看到第一眼——线段树？？？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="题解 AT2654 【[ARC078A] Splitting Pile】">
-<meta property="og:url" content="https://yuygfgg.ml/2020/04/04/solution-arc078a/index.html">
+<meta property="og:title" content="题解 CF315B 【Sereja and Array】">
+<meta property="og:url" content="https://yuygfgg.ml/2020/05/10/solution-cf315b/index.html">
 <meta property="og:site_name" content="yuygfgg&#39;s blog">
-<meta property="og:description" content="思路：暴力求出所有可能，排序求最小绝对值差。 我用vector存储卡的信息，用set排序">
+<meta property="og:description" content="看到第一眼——线段树？？？">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-04T09:55:55.000Z">
-<meta property="article:modified_time" content="2020-05-02T02:40:03.375Z">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1genlcefdyyj312i0a6wex.jpg">
+<meta property="article:published_time" content="2020-05-10T11:51:20.000Z">
+<meta property="article:modified_time" content="2020-05-10T12:53:57.009Z">
 <meta property="article:author" content="yuygfgg">
 <meta property="article:tag" content="洛谷">
 <meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1genlcefdyyj312i0a6wex.jpg">
 
 
 
@@ -125,7 +127,7 @@
 
 
 
-  <link rel="canonical" href="https://yuygfgg.ml/2020/04/04/solution-arc078a/"/>
+  <link rel="canonical" href="https://yuygfgg.ml/2020/05/10/solution-cf315b/"/>
 
 
 
@@ -143,7 +145,7 @@
 
 
 
-  <title>题解 AT2654 【[ARC078A] Splitting Pile】 | yuygfgg's blog</title>
+  <title>题解 CF315B 【Sereja and Array】 | yuygfgg's blog</title>
   
 
 
@@ -304,7 +306,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuygfgg.ml/2020/04/04/solution-arc078a/">
+    <link itemprop="mainEntityOfPage" href="https://yuygfgg.ml/2020/05/10/solution-cf315b/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yuygfgg">
@@ -321,7 +323,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">题解 AT2654 【[ARC078A] Splitting Pile】</h2>
+          <h2 class="post-title" itemprop="name headline">题解 CF315B 【Sereja and Array】</h2>
         
 
         <div class="post-meta">
@@ -334,8 +336,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-04T17:55:55+08:00">
-                2020-04-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-10T19:51:20+08:00">
+                2020-05-10
               </time>
             
 
@@ -377,10 +379,17 @@
       
 
       
-        <p>思路：暴力求出所有可能，排序求最小绝对值差。</p>
-<p>我用vector存储卡的信息，用set排序</p>
+        <p>看到第一眼——线段树？？？</p>
 <a id="more"></a>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; a;</span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; b;<span class="comment">//自动从小到大排序</span></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> s=<span class="number">0</span>,x,y;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,tmp;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;tmp;<span class="comment">//由于空间大小不定，只能用push_back函数放入</span></span><br><span class="line">		a.push_back(tmp);</span><br><span class="line">		s+=tmp;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//现在开始空间大小一定，可以用从0开始的下标访问</span></span><br><span class="line">	x=a[<span class="number">0</span>];</span><br><span class="line">	y=s-a[<span class="number">0</span>];</span><br><span class="line">	b.insert(<span class="built_in">abs</span>(x-y));<span class="comment">//插入第一个</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">		x+=a[i];</span><br><span class="line">		y-=a[i];</span><br><span class="line">		b.insert(<span class="built_in">abs</span>(x-y));<span class="comment">//插入set</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;*b.begin()&lt;&lt;<span class="built_in">endl</span>;<span class="comment">//输出自动排序好的最小数</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><del>出于pj-</del> 我不会，只好直接打暴力</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pls</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;a.size();i++)&#123;</span><br><span class="line">        a[i]+=x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m,x,op,k;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;x;</span><br><span class="line">        a.push_back(x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;op;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">3</span>)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;x;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;a[x<span class="number">-1</span>]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;x;</span><br><span class="line">            pls(x);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;x&gt;&gt;k;</span><br><span class="line">            a[x<span class="number">-1</span>]=k;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>恭喜：<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1genlcefdyyj312i0a6wex.jpg" alt="tle"></p>
+<p>于是肯定要加一点优化，但我不会线段树，于是：</p>
+<ul>
+<li>经过简单观察，发现操作2号耗时最大，就想办法优化</li>
+</ul>
+<p>基本思路：由于是全数组而非部分+，可以用<code>pos</code>变量记录“调整量”，使得不需要每一次操作2都遍历一遍数组</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m,x,op,k,pos=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;x;</span><br><span class="line">        a.push_back(x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;op;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">3</span>)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;x;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;a[x<span class="number">-1</span>]+pos&lt;&lt;<span class="built_in">endl</span>;<span class="comment">//输出时加上“调整量”</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;x;</span><br><span class="line">            pos+=x;<span class="comment">//调整量增加</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;x&gt;&gt;k;</span><br><span class="line">            a[x<span class="number">-1</span>]=k-pos;<span class="comment">//直接赋值，要取消调整量的影响，需要减去调整量，否则后面如果要输出是会多“当前的pos”</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -401,7 +410,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://yuygfgg.ml/2020/04/04/solution-arc078a/" title="题解 AT2654 【[ARC078A] Splitting Pile】">https://yuygfgg.ml/2020/04/04/solution-arc078a/</a>
+    <a href="https://yuygfgg.ml/2020/05/10/solution-cf315b/" title="题解 CF315B 【Sereja and Array】">https://yuygfgg.ml/2020/05/10/solution-cf315b/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -431,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/04/solution-cf149a/" rel="next" title="题解 CF149A 【Business trip】">
-                <i class="fa fa-chevron-left"></i> 题解 CF149A 【Business trip】
+              <a href="/2020/05/05/cz-ak-ioi/" rel="next" title="chen_zhe ak ioi!">
+                <i class="fa fa-chevron-left"></i> chen_zhe ak ioi!
               </a>
             
           </div>
@@ -441,8 +450,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/13/some-small-things/" rel="prev" title="一些小东西4月（已解密）">
-                一些小东西4月（已解密） <i class="fa fa-chevron-right"></i>
+              <a href="/2020/05/10/solution-sp54/" rel="prev" title="题解 SP54 【JULKA - Julka】">
+                题解 SP54 【JULKA - Julka】 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1162,6 +1171,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
