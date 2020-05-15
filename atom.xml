@@ -198,27 +198,6 @@
   </entry>
   
   <entry>
-    <title>一些小东西4月（已解密）</title>
-    <link href="https://yuygfgg.ml/2020/04/13/some-small-things/"/>
-    <id>https://yuygfgg.ml/2020/04/13/some-small-things/</id>
-    <published>2020-04-13T12:11:00.000Z</published>
-    <updated>2020-05-01T13:55:04.204Z</updated>
-    
-    <content type="html"><![CDATA[<p>以后估计只有这个会更新了吧。。。</p><a id="more"></a><h1 id="2020-4-13-20-11"><a href="#2020-4-13-20-11" class="headerlink" title="2020-4-13 20:11"></a>2020-4-13 20:11</h1><p>reeder坏了两个星期了，肿莫办啊？在莫得RSS人要没了啊！</p><p><img src="https://s1.ax1x.com/2020/04/13/Gvtqwn.png" alt=""></p><h1 id="2020-4-14-16-30"><a href="#2020-4-14-16-30" class="headerlink" title="2020-4-14 16:30"></a>2020-4-14 16:30</h1><p>文化课大爆炸（math 71pts），想死的心都有了</p><h1 id="2020-4-14-22-30"><a href="#2020-4-14-22-30" class="headerlink" title="2020-4-14 22:30"></a>2020-4-14 22:30</h1><p>迷茫</p><h1 id="2020-4-16-18-30"><a href="#2020-4-16-18-30" class="headerlink" title="2020-4-16 18:30"></a>2020-4-16 18:30</h1><p>博客一直爆炸，修不好。。。</p><h1 id="2020-4-17-21-20"><a href="#2020-4-17-21-20" class="headerlink" title="2020-4-17 21:20"></a>2020-4-17 21:20</h1><p>修好了</p><h1 id="2020-4-18-11-10"><a href="#2020-4-18-11-10" class="headerlink" title="2020-4-18 11:10"></a>2020-4-18 11:10</h1><p><img src="https://gistcdn.githack.com/sjx233/c112365dfa7c0d7a0f78f2294e26fa87/raw/fa488e3b412e01bbcac72409b047eb06d3e18833/benben-hot-words.svg" alt=""></p><p>)</p><h1 id="2020-4-19-13-49"><a href="#2020-4-19-13-49" class="headerlink" title="2020-4-19 13:49"></a>2020-4-19 13:49</h1><p><img src="https://i.loli.net/2019/10/22/V5IRytciuMTBEPD.gif" alt=""></p><h1 id="2020-4-22-21-10"><a href="#2020-4-22-21-10" class="headerlink" title="2020-4-22 21:10"></a>2020-4-22 21:10</h1><p>可怜的创智。。。</p><blockquote><p>Gitee Gitlab Github 所有开源社区的全部是代码清空并销号</p><p>Twitter Ins FB <del>LG</del> 所有社交平台的全部是瞎改密码然后销号</p><p>Google Microsoft 账号也被销毁</p><p>还有貌似他的blog也被毁了</p></blockquote><p><a href="https://www.code004.ml/posts/about-chuangzhi-a-party-of-jfca/#more" target="_blank" rel="noopener">More</a></p><h1 id="2020-4-27-01-10"><a href="#2020-4-27-01-10" class="headerlink" title="2020-4-27 01:10"></a>2020-4-27 01:10</h1><p>暂别。。再见OI，我还会回来的</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;以后估计只有这个会更新了吧。。。&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="其他" scheme="https://yuygfgg.ml/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
     <title>题解 AT2654 【[ARC078A] Splitting Pile】</title>
     <link href="https://yuygfgg.ml/2020/04/04/solution-arc078a/"/>
     <id>https://yuygfgg.ml/2020/04/04/solution-arc078a/</id>
@@ -473,6 +452,28 @@
 &lt;li&gt;&lt;p&gt;记忆化搜索和动态规划有啥关系&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;动态规划做法&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="学习笔记" scheme="https://yuygfgg.ml/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>递归</title>
+    <link href="https://yuygfgg.ml/2019/10/25/dg/"/>
+    <id>https://yuygfgg.ml/2019/10/25/dg/</id>
+    <published>2019-10-24T16:00:00.000Z</published>
+    <updated>2020-04-13T12:47:01.705Z</updated>
+    
+    <content type="html"><![CDATA[<p>这节课学了递归，<del>好晕</del></p><p>好不容易想通了一点赶紧记下，充当第一篇博客</p><a id="more"></a><p>递归就是函数自己调用自己的过程。那为什么要有递归呢？原因很简单：在解决一个问题的同时，需要解决另一个与当前问题相同的问题，并且这个问题在特定情况下有解（递归结束条件），其他情况的答案都可由此答案推导而来（转移方程）。那又有问题了，为什么不用循环呢？观察上面的描述中“需要解决另一个与当前问题相同的问题”这一句话，真的只需要解决另一个吗？答案是否定的，有可能要解决多个同样的问题，这种情况下，如果使用循环，那么每个循环都要产生多个同样的循环，是无法实现的，所以才要使用递归。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这节课学了递归，&lt;del&gt;好晕&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;好不容易想通了一点赶紧记下，充当第一篇博客&lt;/p&gt;
     
     </summary>
     
