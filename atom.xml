@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuygfgg.ml/"/>
-  <updated>2020-05-10T12:54:12.485Z</updated>
+  <updated>2020-05-26T23:18:05.327Z</updated>
   <id>https://yuygfgg.ml/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>teamv</title>
+    <link href="https://yuygfgg.ml/2020/05/27/teamv/"/>
+    <id>https://yuygfgg.ml/2020/05/27/teamv/</id>
+    <published>2020-05-26T23:16:56.000Z</published>
+    <updated>2020-05-26T23:18:05.327Z</updated>
+    
+    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">password:</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="520d6994e05e8b003abf8e0a852efdfe3da4c6b3dc9de7dd1e42452b80efbf2f">8a33e15d565ed0fdaf2c75e987672843b6148f5ecc78d43457dfb17fc88f2b53468202cb3a9f17df55fba940191dbc07d01d8cd61dada368fb24e973948520830e1e64bd078151c56c02b87b4637ead3</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    
+    <summary type="html">
+    
+      This is an encrypted article and the content may be personal emotional catharsis or tolling techniques. If you do want to see it, please contact me.
+    
+    </summary>
+    
+    
+    
+      <category term="工具" scheme="https://yuygfgg.ml/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>题解 SP54 【JULKA - Julka】</title>
@@ -86,27 +107,6 @@
   </entry>
   
   <entry>
-    <title>洛谷管理真名</title>
-    <link href="https://yuygfgg.ml/2020/05/04/LUOGU/"/>
-    <id>https://yuygfgg.ml/2020/05/04/LUOGU/</id>
-    <published>2020-05-04T07:23:35.000Z</published>
-    <updated>2020-05-05T07:18:53.220Z</updated>
-    
-    <content type="html"><![CDATA[<p>专业人肉100年</p><a id="more"></a><p>kkksc03真名：汪楚奇 男 约1995</p><p>lin_toto真名：林方正 约1999</p><p>StudyingFather真名：张书豪 男 约2003</p><p>chen_zhe真名：陈哲 男 约2004</p><p>xht37真名：徐皓天 男 约2003</p><p>NaCly_Fish真名：李峻枫 男 约2002</p><p>zhouwc真名：周炜程 男 约2003</p><p>noip真名：李欣隆 男 2001.3.11</p><p>ComeIntoPower真名：袁方舟 男 约2001</p><p>CYJian真名：陈胤戬 男 约2003</p><p>FlierKing真名：周永隆 男 约2000</p><p>zcysky真名：周辰宇 男 约2001</p><p>soha真名：金少海 ? 约2000</p><p>darkflames真名：？ 约1990（?）</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;专业人肉100年&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-  </entry>
-  
-  <entry>
     <title>macos下VScode的配置</title>
     <link href="https://yuygfgg.ml/2020/05/04/vscode-macos/"/>
     <id>https://yuygfgg.ml/2020/05/04/vscode-macos/</id>
@@ -124,6 +124,27 @@
     
     
       <category term="工具" scheme="https://yuygfgg.ml/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>洛谷管理真名</title>
+    <link href="https://yuygfgg.ml/2020/05/04/LUOGU/"/>
+    <id>https://yuygfgg.ml/2020/05/04/LUOGU/</id>
+    <published>2020-05-04T07:23:35.000Z</published>
+    <updated>2020-05-05T07:18:53.220Z</updated>
+    
+    <content type="html"><![CDATA[<p>专业人肉100年</p><a id="more"></a><p>kkksc03真名：汪楚奇 男 约1995</p><p>lin_toto真名：林方正 约1999</p><p>StudyingFather真名：张书豪 男 约2003</p><p>chen_zhe真名：陈哲 男 约2004</p><p>xht37真名：徐皓天 男 约2003</p><p>NaCly_Fish真名：李峻枫 男 约2002</p><p>zhouwc真名：周炜程 男 约2003</p><p>noip真名：李欣隆 男 2001.3.11</p><p>ComeIntoPower真名：袁方舟 男 约2001</p><p>CYJian真名：陈胤戬 男 约2003</p><p>FlierKing真名：周永隆 男 约2000</p><p>zcysky真名：周辰宇 男 约2001</p><p>soha真名：金少海 ? 约2000</p><p>darkflames真名：？ 约1990（?）</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;专业人肉100年&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
     
   </entry>
   
@@ -452,28 +473,6 @@
 &lt;li&gt;&lt;p&gt;记忆化搜索和动态规划有啥关系&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;动态规划做法&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="学习笔记" scheme="https://yuygfgg.ml/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>递归</title>
-    <link href="https://yuygfgg.ml/2019/10/25/dg/"/>
-    <id>https://yuygfgg.ml/2019/10/25/dg/</id>
-    <published>2019-10-24T16:00:00.000Z</published>
-    <updated>2020-04-13T12:47:01.705Z</updated>
-    
-    <content type="html"><![CDATA[<p>这节课学了递归，<del>好晕</del></p><p>好不容易想通了一点赶紧记下，充当第一篇博客</p><a id="more"></a><p>递归就是函数自己调用自己的过程。那为什么要有递归呢？原因很简单：在解决一个问题的同时，需要解决另一个与当前问题相同的问题，并且这个问题在特定情况下有解（递归结束条件），其他情况的答案都可由此答案推导而来（转移方程）。那又有问题了，为什么不用循环呢？观察上面的描述中“需要解决另一个与当前问题相同的问题”这一句话，真的只需要解决另一个吗？答案是否定的，有可能要解决多个同样的问题，这种情况下，如果使用循环，那么每个循环都要产生多个同样的循环，是无法实现的，所以才要使用递归。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这节课学了递归，&lt;del&gt;好晕&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;好不容易想通了一点赶紧记下，充当第一篇博客&lt;/p&gt;
     
     </summary>
     
