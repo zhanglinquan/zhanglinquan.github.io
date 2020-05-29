@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuygfgg.ml/"/>
-  <updated>2020-05-10T12:54:12.485Z</updated>
+  <updated>2020-05-29T07:58:10.864Z</updated>
   <id>https://yuygfgg.ml/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>题解 CF863B 【Kayaking】</title>
+    <link href="https://yuygfgg.ml/2020/05/29/solution-cf863b/"/>
+    <id>https://yuygfgg.ml/2020/05/29/solution-cf863b/</id>
+    <published>2020-05-29T07:55:41.000Z</published>
+    <updated>2020-05-29T07:58:10.864Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><p>思路：因为只有两条单人皮艇，可以排除坐单人皮艇的两个人，剩下的数排序并求出相邻两数差值的和$sum$（最小的稳定性一定是排序后两两相邻数的差值之和），求出做小的$sum$</p><a id="more"></a><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">1001</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> n,m,we;</span><br><span class="line">    m=<span class="number">10000</span>;</span><br><span class="line">    <span class="keyword">int</span> s=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span>>>n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i<<span class="number">2</span>*n;i++)</span><br><span class="line">        <span class="built_in">cin</span>>>a[i];</span><br><span class="line">    sort(a,a+<span class="number">2</span>*n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i<<span class="number">2</span>*n;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j<<span class="number">2</span>*n;j++){</span><br><span class="line">            we=s=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">0</span>;l<<span class="number">2</span>*n;l++)</span><br><span class="line">                <span class="keyword">if</span>(l^i&&l^j){</span><br><span class="line">                    <span class="keyword">if</span>(we){</span><br><span class="line">                        s+=a[l]-we;</span><br><span class="line">                        we=<span class="number">0</span>;</span><br><span class="line">                    }</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                        we=a[l];</span><br><span class="line">                }</span><br><span class="line">            <span class="keyword">if</span>(m>s)</span><br><span class="line">                m=s;</span><br><span class="line">        }</span><br><span class="line">    <span class="built_in">cout</span><<m<<<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;思路：因为只有两条单人皮艇，可以排除坐单人皮艇的两个人，剩下的数排序并求出相邻两数差值的和$sum$（最小的稳定性一定是排序后两两相邻数的差值之和），求出做小的$sum$&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="洛谷,题解" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7-%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>题解 SP54 【JULKA - Julka】</title>
@@ -452,28 +473,6 @@
 &lt;li&gt;&lt;p&gt;记忆化搜索和动态规划有啥关系&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;动态规划做法&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="学习笔记" scheme="https://yuygfgg.ml/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>递归</title>
-    <link href="https://yuygfgg.ml/2019/10/25/dg/"/>
-    <id>https://yuygfgg.ml/2019/10/25/dg/</id>
-    <published>2019-10-24T16:00:00.000Z</published>
-    <updated>2020-04-13T12:47:01.705Z</updated>
-    
-    <content type="html"><![CDATA[<p>这节课学了递归，<del>好晕</del></p><p>好不容易想通了一点赶紧记下，充当第一篇博客</p><a id="more"></a><p>递归就是函数自己调用自己的过程。那为什么要有递归呢？原因很简单：在解决一个问题的同时，需要解决另一个与当前问题相同的问题，并且这个问题在特定情况下有解（递归结束条件），其他情况的答案都可由此答案推导而来（转移方程）。那又有问题了，为什么不用循环呢？观察上面的描述中“需要解决另一个与当前问题相同的问题”这一句话，真的只需要解决另一个吗？答案是否定的，有可能要解决多个同样的问题，这种情况下，如果使用循环，那么每个循环都要产生多个同样的循环，是无法实现的，所以才要使用递归。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这节课学了递归，&lt;del&gt;好晕&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;好不容易想通了一点赶紧记下，充当第一篇博客&lt;/p&gt;
     
     </summary>
     
