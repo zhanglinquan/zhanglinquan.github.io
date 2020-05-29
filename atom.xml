@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuygfgg.ml/"/>
-  <updated>2020-05-29T07:58:10.864Z</updated>
+  <updated>2020-05-29T08:42:38.591Z</updated>
   <id>https://yuygfgg.ml/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://yuygfgg.ml/2020/05/29/solution-cf863b/"/>
     <id>https://yuygfgg.ml/2020/05/29/solution-cf863b/</id>
     <published>2020-05-29T07:55:41.000Z</published>
-    <updated>2020-05-29T07:58:10.864Z</updated>
+    <updated>2020-05-29T08:42:38.591Z</updated>
     
     <content type="html"><![CDATA[<html><head></head><body><p>思路：因为只有两条单人皮艇，可以排除坐单人皮艇的两个人，剩下的数排序并求出相邻两数差值的和$sum$（最小的稳定性一定是排序后两两相邻数的差值之和），求出做小的$sum$</p><a id="more"></a><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">1001</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> n,m,we;</span><br><span class="line">    m=<span class="number">10000</span>;</span><br><span class="line">    <span class="keyword">int</span> s=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span>>>n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i<<span class="number">2</span>*n;i++)</span><br><span class="line">        <span class="built_in">cin</span>>>a[i];</span><br><span class="line">    sort(a,a+<span class="number">2</span>*n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i<<span class="number">2</span>*n;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j<<span class="number">2</span>*n;j++){</span><br><span class="line">            we=s=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">0</span>;l<<span class="number">2</span>*n;l++)</span><br><span class="line">                <span class="keyword">if</span>(l^i&&l^j){</span><br><span class="line">                    <span class="keyword">if</span>(we){</span><br><span class="line">                        s+=a[l]-we;</span><br><span class="line">                        we=<span class="number">0</span>;</span><br><span class="line">                    }</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                        we=a[l];</span><br><span class="line">                }</span><br><span class="line">            <span class="keyword">if</span>(m>s)</span><br><span class="line">                m=s;</span><br><span class="line">        }</span><br><span class="line">    <span class="built_in">cout</span><<m<<<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
     
@@ -33,7 +33,9 @@
     
     
     
-      <category term="洛谷,题解" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7-%E9%A2%98%E8%A7%A3/"/>
+      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+      <category term="题解" scheme="https://yuygfgg.ml/tags/%E9%A2%98%E8%A7%A3/"/>
     
   </entry>
   
