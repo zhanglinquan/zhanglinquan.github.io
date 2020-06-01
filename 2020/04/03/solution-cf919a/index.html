@@ -229,6 +229,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-oj">
+          <a href="/oj/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br>
+            
+            oj
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -370,7 +380,7 @@
         <p>思路：贪心，找单价最便宜的超市买即可</p>
 <p>用set从小到大排序</p>
 <a id="more"></a>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">set</span><<span class="keyword">long</span> <span class="keyword">double</span>> c;<span class="comment">//自动从小到大排序</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> m,n;</span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">    <span class="built_in">cin</span>>>m>>n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i<=m;i++){</span><br><span class="line">        <span class="built_in">cin</span>>>a>>b;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">double</span> tmp=((<span class="keyword">long</span> <span class="keyword">double</span>)a/b);</span><br><span class="line">        c.insert(tmp*n*<span class="number">1.0</span>);<span class="comment">//插入（*1.0用来强制类型转换，否则插入set的数是向下取整的int）</span></span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">set</span><<span class="keyword">long</span> <span class="keyword">double</span>>::iterator it=c.begin();<span class="comment">//最便宜超市的单价</span></span><br><span class="line">    <span class="built_in">cout</span><<fixed<<setprecision(<span class="number">10</span>)<<*it<<<span class="built_in">endl</span>;<span class="comment">//保留十位</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits stdc++.h></bits></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">set</span><<span class="keyword">long</span> <span class="keyword">double</span>> c;<span class="comment">//自动从小到大排序</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> m,n;</span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">    <span class="built_in">cin</span>>>m>>n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i<=m;i++){</span><br><span class="line">        <span class="built_in">cin</span>>>a>>b;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">double</span> tmp=((<span class="keyword">long</span> <span class="keyword">double</span>)a/b);</span><br><span class="line">        c.insert(tmp*n*<span class="number">1.0</span>);<span class="comment">//插入（*1.0用来强制类型转换，否则插入set的数是向下取整的int）</span></span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">set</span><<span class="keyword">long</span> <span class="keyword">double</span>>::iterator it=c.begin();<span class="comment">//最便宜超市的单价</span></span><br><span class="line">    <span class="built_in">cout</span><<fixed<<setprecision(<span class="number">10</fixed<<setprecision(<span></span>)<<*it<<<span class="built_in">endl</span>;<span class="comment">//保留十位</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
       
     </div>
@@ -621,7 +631,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.7k字</span>
+  <span class="post-count">博客全站共4.3k字</span>
 </div>
         
 <div class="busuanzi-count">

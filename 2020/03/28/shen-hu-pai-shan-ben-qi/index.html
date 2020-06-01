@@ -229,6 +229,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-oj">
+          <a href="/oj/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br>
+            
+            oj
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -384,7 +394,7 @@
 </li>
 </ol>
 <p>接着输入以下代码：</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var l =  $('#feed > li > div.am-comment-main > header > div > a:nth-child(2)');</span><br><span class="line"><span class="function">function <span class="title">f</span><span class="params">(i)</span> </span>{</span><br><span class="line">$ .post("/api/feed/delete/"+ $(l[i]).attr('data-feed-id'), function() {</span><br><span class="line">console.<span class="built_in">log</span>(i);</span><br><span class="line"><span class="keyword">if</span>(i<l.length<span class="number">-1</span>)setTimeout(`f(${i+<span class="number">1</span>})`,<span class="number">200</span>);</span><br><span class="line">})</span><br><span class="line">}</span><br><span class="line">f(<span class="number">0</span>);</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var l =  $('#feed > li > div.am-comment-main > header > div > a:nth-child(2)');</span><br><span class="line"><span class="function">function <span class="title">f</span><span class="params">(i)</span> </span>{</span><br><span class="line">$ .post("/api/feed/delete/"+ $(l[i]).attr('data-feed-id'), function() {</span><br><span class="line">console.<span class="built_in">log</span>(i);</span><br><span class="line"><span class="keyword">if</span>(i<l.length<span class="number">-1</l.length<span></span>)setTimeout(`f(${i+<span class="number">1</span>})`,<span class="number">200</span>);<br><span class="line">})</span><br><span class="line">}</span><br><span class="line">f(<span class="number">0</span>);</span><br></pre></td></tr></tbody></table></figure>
 <ol>
 <li>如果出现 <code>503</code> 界面重新再次<strong>重复上述过程</strong>。</li>
 </ol>
@@ -665,7 +675,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.7k字</span>
+  <span class="post-count">博客全站共4.3k字</span>
 </div>
         
 <div class="busuanzi-count">
