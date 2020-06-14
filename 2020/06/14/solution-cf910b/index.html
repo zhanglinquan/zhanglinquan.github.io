@@ -75,21 +75,19 @@
 
 
 
-<meta name="description" content="看到第一眼——线段树？？？">
+<meta name="description" content="暴力全排列做法 一共需要$4a+2b$长度的木板，将aaaabb全排列，一共有$15$种情况，所以可以将所有情况都尝试一遍，选择最佳答案。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="题解 CF315B 【Sereja and Array】">
-<meta property="og:url" content="https://yuygfgg.ml/2020/05/10/solution-cf315b/index.html">
+<meta property="og:title" content="solution-cf910b">
+<meta property="og:url" content="https://yuygfgg.ml/2020/06/14/solution-cf910b/index.html">
 <meta property="og:site_name" content="yuygfgg's blog">
-<meta property="og:description" content="看到第一眼——线段树？？？">
+<meta property="og:description" content="暴力全排列做法 一共需要$4a+2b$长度的木板，将aaaabb全排列，一共有$15$种情况，所以可以将所有情况都尝试一遍，选择最佳答案。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1genlcefdyyj312i0a6wex.jpg">
-<meta property="article:published_time" content="2020-05-10T11:51:20.000Z">
-<meta property="article:modified_time" content="2020-05-10T12:53:57.009Z">
+<meta property="article:published_time" content="2020-06-14T11:44:35.000Z">
+<meta property="article:modified_time" content="2020-06-14T11:46:44.934Z">
 <meta property="article:author" content="yuygfgg">
 <meta property="article:tag" content="洛谷">
 <meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1genlcefdyyj312i0a6wex.jpg">
 
 
 
@@ -119,7 +117,7 @@
 
 
 
-  <link rel="canonical" href="https://yuygfgg.ml/2020/05/10/solution-cf315b/">
+  <link rel="canonical" href="https://yuygfgg.ml/2020/06/14/solution-cf910b/">
 
 
 
@@ -137,7 +135,7 @@
 
 
 
-  <title>题解 CF315B 【Sereja and Array】 | yuygfgg's blog</title>
+  <title>solution-cf910b | yuygfgg's blog</title>
   
 
 
@@ -306,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuygfgg.ml/2020/05/10/solution-cf315b/">
+    <link itemprop="mainEntityOfPage" href="https://yuygfgg.ml/2020/06/14/solution-cf910b/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yuygfgg">
@@ -323,7 +321,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">题解 CF315B 【Sereja and Array】</h2>
+          <h2 class="post-title" itemprop="name headline">solution-cf910b</h2>
         
 
         <div class="post-meta">
@@ -336,8 +334,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-10T19:51:20+08:00">
-                2020-05-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-14T19:44:35+08:00">
+                2020-06-14
               </time>
             
 
@@ -379,17 +377,10 @@
       
 
       
-        <p>看到第一眼——线段树？？？</p>
+        <p>暴力全排列做法</p>
+<p>一共需要$4a+2b$长度的木板，将<code>aaaabb</code>全排列，一共有$15$种情况，所以可以将所有情况都尝试一遍，选择最佳答案。</p>
 <a id="more"></a>
-<p><del>出于pj-</del> 我不会，只好直接打暴力</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits stdc++.h></bits></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">vector</span><<span class="keyword">int</span>> a;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pls</span><span class="params">(<span class="keyword">int</span> x)</span></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i<a.size();i++){< span><br><span class="line">        a[i]+=x;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> n,m,x,op,k;</span><br><span class="line">    <span class="built_in">cin</span>>>n>>m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i<n;i++){< span><br><span class="line">        <span class="built_in">cin</span>>>x;</span><br><span class="line">        a.push_back(x);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i<m;i++){< span><br><span class="line">        <span class="built_in">cin</span>>>op;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">3</span>){</span><br><span class="line">            <span class="built_in">cin</span>>>x;</span><br><span class="line">            <span class="built_in">cout</span><<a[x<span class="number">-1</a[x<span></span>]<<<span class="built_in">endl</span>;</m;i++){<></span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">2</span>){</span><br><span class="line">            <span class="built_in">cin</span>>>x;</span><br><span class="line">            pls(x);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">1</span>){</span><br><span class="line">            <span class="built_in">cin</span>>>x>>k;</span><br><span class="line">            a[x<span class="number">-1</span>]=k;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></n;i++){<></span></a.size();i++){<></span></pre></td></tr></tbody></table></figure>
-<p>恭喜：<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1genlcefdyyj312i0a6wex.jpg" alt="tle"></p>
-<p>于是肯定要加一点优化，但我不会线段树，于是：</p>
-<ul>
-<li>经过简单观察，发现操作2号耗时最大，就想办法优化</li>
-</ul>
-<p>基本思路：由于是全数组而非部分+，可以用<code>pos</code>变量记录“调整量”，使得不需要每一次操作2都遍历一遍数组</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits stdc++.h></bits></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">vector</span><<span class="keyword">int</span>> a;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> n,m,x,op,k,pos=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span>>>n>>m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i<n;i++){< span><br><span class="line">        <span class="built_in">cin</span>>>x;</span><br><span class="line">        a.push_back(x);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i<m;i++){< span><br><span class="line">        <span class="built_in">cin</span>>>op;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">3</span>){</span><br><span class="line">            <span class="built_in">cin</span>>>x;</span><br><span class="line">            <span class="built_in">cout</span><<a[x<span class="number">-1</a[x<span></span>]+pos<<<span class="built_in">endl</span>;<span class="comment">//输出时加上“调整量”</span></m;i++){<></span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">2</span>){</span><br><span class="line">            <span class="built_in">cin</span>>>x;</span><br><span class="line">            pos+=x;<span class="comment">//调整量增加</span></span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="number">1</span>){</span><br><span class="line">            <span class="built_in">cin</span>>>x>>k;</span><br><span class="line">            a[x<span class="number">-1</span>]=k-pos;<span class="comment">//直接赋值，要取消调整量的影响，需要减去调整量，否则后面如果要输出是会多“当前的pos”</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></n;i++){<></span></pre></td></tr></tbody></table></figure>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits stdc++.h></bits></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> c[<span class="number">20</span>][<span class="number">8</span>],k;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">per</span><span class="params">(<span class="built_in">string</span> s)</span>  </span>{  </span><br><span class="line">    k = <span class="number">0</span>;</span><br><span class="line">    sort(s.begin(),s.end());  </span><br><span class="line">    <span class="keyword">do</span>{</span><br><span class="line">        k++;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i<s.size();i++) {< span><br><span class="line">            c[k][i]=s[i];</span><br><span class="line">    }</span><br><span class="line">    }<span class="keyword">while</span>(next_permutation(s.begin(),s.end()));  </span><br><span class="line">}  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> n,a,b,sum,ans,cnt ;</span><br><span class="line">    <span class="built_in">string</span> s=<span class="string">"aaaabb"</span>;</span><br><span class="line">    per(s);</span><br><span class="line">    <span class="built_in">cin</span>>>n>>a>>b;</span><br><span class="line">    ans=<span class="number">10000</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i<=k;i++){</span><br><span class="line">        sum=n;cnt=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j<=<span class="number">5</span>;j++){</span><br><span class="line">            <span class="keyword">if</span>(c[i][j]==<span class="string">'a'</span>) sum-=a;</span><br><span class="line">            <span class="keyword">if</span>(c[i][j]==<span class="string">'b'</span>) sum-=b;</span><br><span class="line">            <span class="keyword">if</span>(sum<<span class="number">0</span>){</span><br><span class="line">                sum= n;</span><br><span class="line">                <span class="keyword">if</span>(c[i][j]==<span class="string">'a'</span>) sum-=a;</span><br><span class="line">                <span class="keyword">if</span>(c[i][j]==<span class="string">'b'</span>) sum-=b;</span><br><span class="line">                cnt++;</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">if</span>(j==<span class="number">5</span>&&sum>=<span class="number">0</span>) cnt++;</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(cnt<ans)< span><br><span class="line">            ans=cnt;</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">cout</span><<ans<<<span class="built_in">endl</ans<<<span></span>;</ans)<></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></s.size();i++)></span></pre></td></tr></tbody></table></figure>
 
       
     </div>
@@ -410,7 +401,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://yuygfgg.ml/2020/05/10/solution-cf315b/" title="题解 CF315B 【Sereja and Array】">https://yuygfgg.ml/2020/05/10/solution-cf315b/</a>
+    <a href="https://yuygfgg.ml/2020/06/14/solution-cf910b/" title="solution-cf910b">https://yuygfgg.ml/2020/06/14/solution-cf910b/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -440,8 +431,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/05/cz-ak-ioi/" rel="next" title="chen_zhe ak ioi!">
-                <i class="fa fa-chevron-left"></i> chen_zhe ak ioi!
+              <a href="/2020/06/14/solution-cf630r/" rel="next" title="solution-cf630r">
+                <i class="fa fa-chevron-left"></i> solution-cf630r
               </a>
             
           </div>
@@ -449,10 +440,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/05/10/solution-sp54/" rel="prev" title="题解 SP54 【JULKA - Julka】">
-                题解 SP54 【JULKA - Julka】 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
