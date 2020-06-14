@@ -108,6 +108,7 @@
     <title>solution-cf630r</title>
     <url>/2020/06/14/solution-cf630r/</url>
     <content><![CDATA[<html><head></head><body><p>前面那个大佬讲得方法<del>太显然</del>了，蒟蒻提供一种简单一点的思路</p>
+<a id="more"></a>
 <p>首先我们可以发现</p>
 <blockquote>
 <p>不能将已染色的格子的周围格进行染色</p>

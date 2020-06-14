@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuygfgg.ml/"/>
-  <updated>2020-06-14T05:25:12.570Z</updated>
+  <updated>2020-06-14T05:57:04.735Z</updated>
   <id>https://yuygfgg.ml/</id>
   
   <author>
@@ -21,21 +21,13 @@
     <link href="https://yuygfgg.ml/2020/06/14/solution-cf630r/"/>
     <id>https://yuygfgg.ml/2020/06/14/solution-cf630r/</id>
     <published>2020-06-14T05:22:37.000Z</published>
-    <updated>2020-06-14T05:25:12.570Z</updated>
+    <updated>2020-06-14T05:57:04.735Z</updated>
     
-    <content type="html"><![CDATA[<html><head></head><body><p>前面那个大佬讲得方法<del>太显然</del>了，蒟蒻提供一种简单一点的思路</p><p>首先我们可以发现</p><blockquote><p>不能将已染色的格子的周围格进行染色</p></blockquote><p>这个限制可以忽视（手动模拟一下会发现总有替代办法）</p><p>于是可以变成一个数轴，两个人分别选数</p><p>再思考一下会发现其实就相当于挨个（1、2、3、4）选，谁选最后一个赢，另一个输</p><p>那就是判奇偶的大水题了</p><p>code:</p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n;</span><br><span class="line">    <span class="built_in">cin</span>>>n;</span><br><span class="line">    <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>) <span class="built_in">cout</span><<<span class="number">2</span><<<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">cout</span><<<span class="number">1</span><<<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
+    <content type="html"><![CDATA[<html><head></head><body><p>前面那个大佬讲得方法<del>太显然</del>了，蒟蒻提供一种简单一点的思路</p><a id="more"></a><p>首先我们可以发现</p><blockquote><p>不能将已染色的格子的周围格进行染色</p></blockquote><p>这个限制可以忽视（手动模拟一下会发现总有替代办法）</p><p>于是可以变成一个数轴，两个人分别选数</p><p>再思考一下会发现其实就相当于挨个（1、2、3、4）选，谁选最后一个赢，另一个输</p><p>那就是判奇偶的大水题了</p><p>code:</p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n;</span><br><span class="line">    <span class="built_in">cin</span>>>n;</span><br><span class="line">    <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>) <span class="built_in">cout</span><<<span class="number">2</span><<<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">cout</span><<<span class="number">1</span><<<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;前面那个大佬讲得方法&lt;del&gt;太显然&lt;/del&gt;了，蒟蒻提供一种简单一点的思路&lt;/p&gt;
-&lt;p&gt;首先我们可以发现&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;不能将已染色的格子的周围格进行染色&lt;/p&gt;
-&lt;/blockquote&gt;
-
-      
+      &lt;p&gt;前面那个大佬讲得方法&lt;del&gt;太显然&lt;/del&gt;了，蒟蒻提供一种简单一点的思路&lt;/p&gt;
     
     </summary>
     
