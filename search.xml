@@ -105,7 +105,7 @@
       </tags>
   </entry>
   <entry>
-    <title>solution-cf910b</title>
+    <title>题解 CF910B 【Door Frames】</title>
     <url>/2020/06/14/solution-cf910b/</url>
     <content><![CDATA[<html><head></head><body><p>暴力全排列做法</p>
 <p>一共需要$4a+2b$长度的木板，将<code>aaaabb</code>全排列，一共有$15$种情况，所以可以将所有情况都尝试一遍，选择最佳答案。</p>
@@ -118,7 +118,7 @@
       </tags>
   </entry>
   <entry>
-    <title>solution-cf630r</title>
+    <title>题解 CF630R 【Game】</title>
     <url>/2020/06/14/solution-cf630r/</url>
     <content><![CDATA[<html><head></head><body><p>前面那个大佬讲得方法<del>太显然</del>了，蒟蒻提供一种简单一点的思路</p>
 <a id="more"></a>
