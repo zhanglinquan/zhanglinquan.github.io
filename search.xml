@@ -177,7 +177,7 @@
 <p>还是在<code>Preferences</code>里，选<code>Resources</code>，把CPU和内存拉满就可以了<br><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gfjsqaot8zj31b90u0wjk.jpg" alt="wee"></p>
 <p>tips:别担心，这里的内存分配不是像虚拟机一样立即吃掉，而是是动态的，8G只是最大容量</p>
 <h2 id="体验"><a href="#体验" class="headerlink" title="体验"></a>体验</h2><p>现在，访问<code>localhost:8888</code>就可以看到你自己的oj了！</p>
-<h2 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h2><p>欢迎来 <a href="https://oj.yuygfgg.ml" target="_blank" rel="noopener">https://oj.yuygfgg.ml</a> 玩（这个是我用内网穿透做的，二我的电脑可能会关机，所以很可能上不去）</p>
+<h2 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h2><p><del>欢迎来 <a href="https://oj.yuygfgg.ml" target="_blank" rel="noopener">https://oj.yuygfgg.ml</a> 玩（这个是我用内网穿透做的，二我的电脑可能会关机，所以很可能上不去）</del><br>内网穿透被墙了。。。</p>
 </body></html>]]></content>
       <tags>
         <tag>其他</tag>
