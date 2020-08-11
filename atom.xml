@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuygfgg.ml/"/>
-  <updated>2020-06-20T13:55:33.846Z</updated>
+  <updated>2020-08-11T00:41:40.673Z</updated>
   <id>https://yuygfgg.ml/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>题解 CF1214C 【Bad Sequence】</title>
+    <link href="https://yuygfgg.ml/2020/08/11/solution-cf1214c/"/>
+    <id>https://yuygfgg.ml/2020/08/11/solution-cf1214c/</id>
+    <published>2020-08-11T00:39:42.000Z</published>
+    <updated>2020-08-11T00:41:40.673Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><p>水题<br><a id="more"></a><br>思路：</p><ol><li><p>如果 $n$ 是奇数肯定不行（一对括号两个，只有偶数个总数可能）。</p></li><li><p>删除所有匹配的上的括号。</p></li><li><p>统计左括号和右括号的总数，如果左括号数目不等于右括号数目那肯定不行。</p></li><li><p>如果栈里剩下的左括号少于 $2$ 个，那可以，否则不行。</p></li></ol><p>code:</p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="built_in">stack</span><<span class="keyword">char</span>> sta;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span>>>n>>s;</span><br><span class="line">    <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">1</span>) <span class="built_in">cout</span><<<span class="string">"No"</span><<<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">        <span class="keyword">int</span> sumleft=<span class="number">0</span>,sumright=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i<n;i++) {</span><br><span class="line">            <span class="keyword">if</span>(s[i]==<span class="string">'('</span>) sta.push(s[i]);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[i]==<span class="string">')'</span>&&!sta.empty()) sta.pop();</span><br><span class="line">            <span class="keyword">if</span>(s[i]==<span class="string">'('</span>) sumleft++;</span><br><span class="line">            <span class="keyword">else</span> sumright++;</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(sta.empty()&&sumleft==sumright) <span class="built_in">cout</span><<<span class="string">"Yes"</span><<<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span> {</span><br><span class="line">            <span class="keyword">if</span>(sta.size()><span class="number">1</span>||sumleft!=sumright) <span class="built_in">cout</span><<<span class="string">"No"</span><<<span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="built_in">cout</span><<<span class="string">"Yes"</span><<<span class="built_in">endl</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;水题&lt;br&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+      <category term="题解" scheme="https://yuygfgg.ml/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>vimrc,vimrc.custom.config</title>
@@ -443,30 +466,6 @@
     
       &lt;p&gt;把所有可乐倒进2个罐子里，那么肯定是选最大的两个罐子，再和总可乐数比较即可。&lt;/p&gt;
 &lt;p&gt;要自动排序又不会去重的数据结构当然选multiset&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-      <category term="题解" scheme="https://yuygfgg.ml/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>题解 CF653A 【Bear and Three Balls】</title>
-    <link href="https://yuygfgg.ml/2020/04/02/solution-cf653a/"/>
-    <id>https://yuygfgg.ml/2020/04/02/solution-cf653a/</id>
-    <published>2020-04-02T06:45:44.000Z</published>
-    <updated>2020-04-13T12:45:33.546Z</updated>
-    
-    <content type="html"><![CDATA[<html><head></head><body><p>思路：排序+去重，判断是否有连续的三个数</p><p>看到既要排序还要去重，当然用set啦</p><a id="more"></a><p>具体解释见代码<br></p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">set</span><<span class="keyword">int</span>> a;<span class="comment">//这是一个自动排序+去重的数据结构</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">cin</span>>>n;</span><br><span class="line"><span class="keyword">int</span> tmp;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i<=n;i++){</span><br><span class="line"><span class="built_in">cin</span>>>tmp;<span class="comment">//由于空间大小是set自动分配的，只能先输入临时变量再通过insert函数插入</span></span><br><span class="line">a.insert(tmp);</span><br><span class="line">}</span><br><span class="line"><span class="built_in">set</span><<span class="keyword">int</span>>::iterator ed=a.end();<span class="comment">//不直接用.end()的原因看下面for语句的解释</span></span><br><span class="line">ed--;<span class="comment">//由于set::iterator不能用-=运算符，只能分两次--</span></span><br><span class="line">ed--;</span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">set</span><<span class="keyword">int</span>>::iterator it=a.begin();it!=ed;it++){<span class="comment">//it为a.end()时it+1和+2处会越界，所以用前面相当于a.end()-2的iterator做边界</span></span><br><span class="line"><span class="built_in">set</span><<span class="keyword">int</span>>::iterator it2=it;<span class="comment">//it+1，因为set::iterator不支持+=或+，所以定义两个iterator分别代表it+1和it+2</span></span><br><span class="line">it2++;</span><br><span class="line"><span class="built_in">set</span><<span class="keyword">int</span>>::iterator it3=it2;<span class="comment">//it+2，理由同上</span></span><br><span class="line">it3++;</span><br><span class="line"><span class="keyword">if</span>(*it+<span class="number">1</span>==*it2&&*it2+<span class="number">1</span>==*it3){<span class="comment">//判断是否为连续三个数（访问iterator指向的元素要加*）</span></span><br><span class="line"><span class="built_in">cout</span><<<span class="string">"YES"</span><<<span class="built_in">endl</span>;<span class="comment">//满足</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//结束</span></span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line"><span class="built_in">cout</span><<<span class="string">"NO"</span><<<span class="built_in">endl</span>;<span class="comment">//不满足</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p></body></html>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;思路：排序+去重，判断是否有连续的三个数&lt;/p&gt;
-&lt;p&gt;看到既要排序还要去重，当然用set啦&lt;/p&gt;
     
     </summary>
     
