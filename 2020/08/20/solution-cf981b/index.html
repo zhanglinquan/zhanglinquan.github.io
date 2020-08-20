@@ -60,7 +60,7 @@
 
 
 
-  <meta name="keywords" content="blog yuygfgg OI OIER">
+  <meta name="keywords" content="洛谷,题解,">
 
 
 
@@ -75,17 +75,18 @@
 
 
 
-<meta name="description" content="欢迎来到我的小站呀，很高兴遇见你！🤝  🏠 关于本站有空瞎写👨‍💻 博主是谁世界终极死胖子小学生⛹ 兴趣爱好coding,eating📬 联系我呀QQ:2396292922">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://yuygfgg.ml/about/about.html">
+<meta name="description" content="其实不要上面那个大佬讲得那么麻烦 用一个 $map$ 记录每个编号的最大价值，再遍历 $map$ 求总和就可以了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="题解 CF981B 【Businessmen Problems】">
+<meta property="og:url" content="https://yuygfgg.ml/2020/08/20/solution-cf981b/index.html">
 <meta property="og:site_name" content="yuygfgg's blog">
-<meta property="og:description" content="欢迎来到我的小站呀，很高兴遇见你！🤝  🏠 关于本站有空瞎写👨‍💻 博主是谁世界终极死胖子小学生⛹ 兴趣爱好coding,eating📬 联系我呀QQ:2396292922">
+<meta property="og:description" content="其实不要上面那个大佬讲得那么麻烦 用一个 $map$ 记录每个编号的最大价值，再遍历 $map$ 求总和就可以了">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-01-25T11:09:48.000Z">
-<meta property="article:modified_time" content="2020-03-04T13:21:01.621Z">
+<meta property="article:published_time" content="2020-08-20T13:44:56.000Z">
+<meta property="article:modified_time" content="2020-08-20T13:46:52.860Z">
 <meta property="article:author" content="yuygfgg">
-<meta property="article:tag" content="OI blog C++ 博客 洛谷 OIer">
+<meta property="article:tag" content="洛谷">
+<meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
 
 
@@ -116,7 +117,7 @@
 
 
 
-  <link rel="canonical" href="https://yuygfgg.ml/about/about.html">
+  <link rel="canonical" href="https://yuygfgg.ml/2020/08/20/solution-cf981b/">
 
 
 
@@ -134,7 +135,7 @@
 
 
 
-  <title>关于 | yuygfgg's blog</title>
+  <title>题解 CF981B 【Businessmen Problems】 | yuygfgg's blog</title>
   
 
 
@@ -281,36 +282,178 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yuygfgg.ml/2020/08/20/solution-cf981b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yuygfgg">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yuygfgg's blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">关于</h2>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="🏠-关于本站"><a href="#🏠-关于本站" class="headerlink" title="🏠 关于本站"></a>🏠 关于本站</h2><h2 id="有空瞎写"><a href="#有空瞎写" class="headerlink" title="有空瞎写"></a>有空瞎写</h2><h2 id="👨‍💻-博主是谁"><a href="#👨‍💻-博主是谁" class="headerlink" title="👨‍💻 博主是谁"></a>👨‍💻 博主是谁</h2><h2 id="世界终极死胖子小学生"><a href="#世界终极死胖子小学生" class="headerlink" title="世界终极死胖子小学生"></a><del>世界终极死胖子</del>小学生</h2><h2 id="⛹-兴趣爱好"><a href="#⛹-兴趣爱好" class="headerlink" title="⛹ 兴趣爱好"></a>⛹ 兴趣爱好</h2><h2 id="coding-eating"><a href="#coding-eating" class="headerlink" title="coding,eating"></a>coding,<del>eating</del></h2><h2 id="📬-联系我呀"><a href="#📬-联系我呀" class="headerlink" title="📬 联系我呀"></a>📬 联系我呀</h2><h2 id="QQ-2396292922"><a href="#QQ-2396292922" class="headerlink" title="QQ:2396292922"></a>QQ:2396292922</h2>
+          <h2 class="post-title" itemprop="name headline">题解 CF981B 【Businessmen Problems】</h2>
         
-      </div>
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-20T21:44:56+08:00">
+                2020-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>其实不要上面那个大佬讲得那么麻烦</p>
+<p>用一个 $map$ 记录每个编号的最大价值，再遍历 $map$ 求总和就可以了</p>
+<a id="more"></a>
+<p>code:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits stdc++.h></bits></span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fol(i,a,b) for(int i=a;i<=(b);i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> bor(i,a,b) for(int i=a;i>=(b);--i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">map</span><<span class="keyword">int</span>,<span class="keyword">int</span>> mp;</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> n,m,tmp;</span><br><span class="line">    <span class="built_in">cin</span>>>n;</span><br><span class="line">    fol(i,<span class="number">1</span>,n){</span><br><span class="line">        <span class="built_in">cin</span>>>m>>tmp;</span><br><span class="line">        mp[m]=max(mp[m],tmp);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">cin</span>>>n;</span><br><span class="line">    fol(i,<span class="number">1</span>,n){</span><br><span class="line">        <span class="built_in">cin</span>>>m>>tmp;</span><br><span class="line">        mp[m]=max(mp[m],tmp);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">map</span><<span class="keyword">int</span>,<span class="keyword">int</span>>::iterator it=mp.begin();it!=mp.end();it++){</span><br><span class="line">        sum+=(*it).second;</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">cout</span><<sum<<<span class="built_in">endl</sum<<<span></span>;<br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    yuygfgg
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="https://yuygfgg.ml/2020/08/20/solution-cf981b/" title="题解 CF981B 【Businessmen Problems】">https://yuygfgg.ml/2020/08/20/solution-cf981b/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%B4%9B%E8%B0%B7/" rel="tag"># 洛谷</a>
+          
+            <a href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag"># 题解</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/08/11/solution-cf1214c/" rel="next" title="题解 CF1214C 【Bad Sequence】">
+                <i class="fa fa-chevron-left"></i> 题解 CF1214C 【Bad Sequence】
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/08/20/solution-cf1110a/" rel="prev" title="题解 CF1110A 【Parity】">
+                题解 CF1110A 【Parity】 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -343,17 +486,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -447,22 +581,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#🏠-关于本站"><span class="nav-number">1.</span> <span class="nav-text">🏠 关于本站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有空瞎写"><span class="nav-number">2.</span> <span class="nav-text">有空瞎写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#👨‍💻-博主是谁"><span class="nav-number">3.</span> <span class="nav-text">👨‍💻 博主是谁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#世界终极死胖子小学生"><span class="nav-number">4.</span> <span class="nav-text">世界终极死胖子小学生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#⛹-兴趣爱好"><span class="nav-number">5.</span> <span class="nav-text">⛹ 兴趣爱好</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#coding-eating"><span class="nav-number">6.</span> <span class="nav-text">coding,eating</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#📬-联系我呀"><span class="nav-number">7.</span> <span class="nav-text">📬 联系我呀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QQ-2396292922"><span class="nav-number">8.</span> <span class="nav-text">QQ:2396292922</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -1033,6 +1151,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

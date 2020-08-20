@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuygfgg.ml/"/>
-  <updated>2020-08-11T00:41:40.673Z</updated>
+  <updated>2020-08-20T13:48:25.714Z</updated>
   <id>https://yuygfgg.ml/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>题解 CF1110A 【Parity】</title>
+    <link href="https://yuygfgg.ml/2020/08/20/solution-cf1110a/"/>
+    <id>https://yuygfgg.ml/2020/08/20/solution-cf1110a/</id>
+    <published>2020-08-20T13:47:19.000Z</published>
+    <updated>2020-08-20T13:48:25.714Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><p>首先两个公式$：$奇数 $+$ 奇数 $=$ 偶数，奇数 $*$ 奇数 $=$ 奇数</p><p>如果 $a_i$ 与 $b$ 只要同时是奇数就 $s+1$，但最后一位只要判断 $a_i$.</p><p>最后判断 $s$ 的奇偶性</p><a id="more"></a><p>code：</p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> b,n,k,i,a,s=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span>>>b>>n;</span><br><span class="line">    k=n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i<n;i++,k--){</span><br><span class="line">        <span class="built_in">cin</span>>>a;</span><br><span class="line">        <span class="keyword">if</span>(i<n<span class="number">-1</span>){</span><br><span class="line">            <span class="keyword">if</span>((a%<span class="number">2</span>!=<span class="number">0</span>)&&(b%<span class="number">2</span>!=<span class="number">0</span>)){</span><br><span class="line">                s++;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(k==<span class="number">0</span>){</span><br><span class="line">            <span class="keyword">if</span>(a%<span class="number">2</span>!=<span class="number">0</span>){</span><br><span class="line">                s++;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }    </span><br><span class="line">    <span class="keyword">if</span>(s%<span class="number">2</span>==<span class="number">0</span>){</span><br><span class="line">        <span class="built_in">cout</span><<<span class="string">"even"</span><<<span class="built_in">endl</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">        <span class="built_in">cout</span><<<span class="string">"odd"</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先两个公式$：$奇数 $+$ 奇数 $=$ 偶数，奇数 $*$ 奇数 $=$ 奇数&lt;/p&gt;
+&lt;p&gt;如果 $a_i$ 与 $b$ 只要同时是奇数就 $s+1$，但最后一位只要判断 $a_i$.&lt;/p&gt;
+&lt;p&gt;最后判断 $s$ 的奇偶性&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+      <category term="题解" scheme="https://yuygfgg.ml/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>题解 CF981B 【Businessmen Problems】</title>
+    <link href="https://yuygfgg.ml/2020/08/20/solution-cf981b/"/>
+    <id>https://yuygfgg.ml/2020/08/20/solution-cf981b/</id>
+    <published>2020-08-20T13:44:56.000Z</published>
+    <updated>2020-08-20T13:46:52.860Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><p>其实不要上面那个大佬讲得那么麻烦</p><p>用一个 $map$ 记录每个编号的最大价值，再遍历 $map$ 求总和就可以了</p><a id="more"></a><p>code:</p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fol(i,a,b) for(int i=a;i<=(b);i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> bor(i,a,b) for(int i=a;i>=(b);--i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">map</span><<span class="keyword">int</span>,<span class="keyword">int</span>> mp;</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> n,m,tmp;</span><br><span class="line">    <span class="built_in">cin</span>>>n;</span><br><span class="line">    fol(i,<span class="number">1</span>,n){</span><br><span class="line">        <span class="built_in">cin</span>>>m>>tmp;</span><br><span class="line">        mp[m]=max(mp[m],tmp);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">cin</span>>>n;</span><br><span class="line">    fol(i,<span class="number">1</span>,n){</span><br><span class="line">        <span class="built_in">cin</span>>>m>>tmp;</span><br><span class="line">        mp[m]=max(mp[m],tmp);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">map</span><<span class="keyword">int</span>,<span class="keyword">int</span>>::iterator it=mp.begin();it!=mp.end();it++){</span><br><span class="line">        sum+=(*it).second;</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">cout</span><<sum<<<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其实不要上面那个大佬讲得那么麻烦&lt;/p&gt;
+&lt;p&gt;用一个 $map$ 记录每个编号的最大价值，再遍历 $map$ 求总和就可以了&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+      <category term="题解" scheme="https://yuygfgg.ml/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>题解 CF1214C 【Bad Sequence】</title>
@@ -418,54 +467,6 @@
     
       &lt;p&gt;这题是特别水的贪心，可以用自动排序的set实现&lt;/p&gt;
 &lt;p&gt;主要思路：将所有活动按结束时间从小到大排序，能进行活动就进行，遇到不能的就结束&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-      <category term="题解" scheme="https://yuygfgg.ml/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>题解 CF230A 【Dragons】</title>
-    <link href="https://yuygfgg.ml/2020/04/03/solution-cf230a/"/>
-    <id>https://yuygfgg.ml/2020/04/03/solution-cf230a/</id>
-    <published>2020-04-03T03:06:09.000Z</published>
-    <updated>2020-04-13T12:48:27.962Z</updated>
-    
-    <content type="html"><![CDATA[<html><head></head><body><p>用贪心的策略，每次打最小的龙</p><p>这里用会自动排序的set实现。</p><a id="more"></a><p>具体见代码</p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">dr</span>{</span></span><br><span class="line"><span class="keyword">int</span> x,y;<span class="comment">//龙的结构体</span></span><br><span class="line">};</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">drcmp</span>{</span><span class="comment">//比较函数类</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> dr& a,<span class="keyword">const</span> dr& b)</span></span>{</span><br><span class="line">            <span class="keyword">return</span> a.x<=b.x;<span class="comment">//注意，要<=，不是<</span></span><br><span class="line">        }</span><br><span class="line">};</span><br><span class="line"><span class="built_in">set</span><dr,drcmp> a;<span class="comment">//存龙的信息的set，使用自定义比较函数类</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line"><span class="keyword">int</span> f,n;</span><br><span class="line"><span class="built_in">cin</span>>>f>>n;</span><br><span class="line">dr tmp;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i<=n;i++){</span><br><span class="line"><span class="built_in">cin</span>>>tmp.x>>tmp.y;<span class="comment">//输入临时变量在插入</span></span><br><span class="line">a.insert(tmp);</span><br><span class="line">}</span><br><span class="line"><span class="built_in">set</span><dr>::iterator it=a.begin();<span class="comment">//定义指向开头（最小）的迭代器</span></span><br><span class="line"><span class="keyword">for</span>(;it!=a.end();it++){</span><br><span class="line"><span class="keyword">if</span>(f>(*it).x) f+=(*it).y;<span class="comment">//现有力量值足够，加上额外获得的（访问iterator指向的元素要加*）</span></span><br><span class="line"><span class="keyword">else</span>{<span class="comment">//不能，输出，结束</span></span><br><span class="line"><span class="built_in">cout</span><<<span class="string">"NO"</span><<<span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line"><span class="built_in">cout</span><<<span class="string">"YES"</span><<<span class="built_in">endl</span>;<span class="comment">//能进入下一层</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;用贪心的策略，每次打最小的龙&lt;/p&gt;
-&lt;p&gt;这里用会自动排序的set实现。&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-      <category term="题解" scheme="https://yuygfgg.ml/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>题解 CF892A 【Greed】</title>
-    <link href="https://yuygfgg.ml/2020/04/02/solution-cf892a/"/>
-    <id>https://yuygfgg.ml/2020/04/02/solution-cf892a/</id>
-    <published>2020-04-02T13:06:28.000Z</published>
-    <updated>2020-04-13T12:48:11.470Z</updated>
-    
-    <content type="html"><![CDATA[<html><head></head><body><p>把所有可乐倒进2个罐子里，那么肯定是选最大的两个罐子，再和总可乐数比较即可。</p><p>要自动排序又不会去重的数据结构当然选multiset</p><a id="more"></a><p>具体用法见代码<br></p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">multiset</span><<span class="keyword">int</span>> a;<span class="comment">//自动从小到大排序但不会去重的数据结构</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> tmp,n,sum=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">cin</span>>>n;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i<=n;i++){</span><br><span class="line"><span class="built_in">cin</span>>>tmp;<span class="comment">//输入可乐数并累加</span></span><br><span class="line">sum+=tmp;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i<=n;i++){</span><br><span class="line"><span class="built_in">cin</span>>>tmp;<span class="comment">////由于空间大小是multiset自动分配的，只能先输入临时变量再通过insert函数插入</span></span><br><span class="line">a.insert(tmp);</span><br><span class="line">}</span><br><span class="line"><span class="built_in">multiset</span><<span class="keyword">int</span>>::iterator it=a.end();<span class="comment">//因为是从小到大排序，所以最大的在结尾处</span></span><br><span class="line">it--;<span class="comment">//.end()函数返回的iterator是最后一个元素还要后面一个，所以真正最大的要-1，但multiset::iterator不支持除++和--以外的运算，所以用--运算</span></span><br><span class="line"><span class="built_in">multiset</span><<span class="keyword">int</span>>::iterator it2=it;<span class="comment">//第二大</span></span><br><span class="line">it2--;<span class="comment">//同上</span></span><br><span class="line"><span class="keyword">if</span>(sum<=(*it+*it2)) <span class="built_in">cout</span><<<span class="string">"YES"</span><<<span class="built_in">endl</span>;<span class="comment">//装得下（访问iterator指向的元素要加*）</span></span><br><span class="line"><span class="keyword">else</span> <span class="built_in">cout</span><<<span class="string">"NO"</span><<<span class="built_in">endl</span>;<span class="comment">//装不下</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p></body></html>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;把所有可乐倒进2个罐子里，那么肯定是选最大的两个罐子，再和总可乐数比较即可。&lt;/p&gt;
-&lt;p&gt;要自动排序又不会去重的数据结构当然选multiset&lt;/p&gt;
     
     </summary>
     
