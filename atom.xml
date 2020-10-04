@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuygfgg.ml/"/>
-  <updated>2020-08-20T13:48:25.714Z</updated>
+  <updated>2020-09-14T13:09:42.750Z</updated>
   <id>https://yuygfgg.ml/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>solution-cf1011a</title>
+    <link href="https://yuygfgg.ml/2020/09/14/solution-cf1011a/"/>
+    <id>https://yuygfgg.ml/2020/09/14/solution-cf1011a/</id>
+    <published>2020-09-14T13:09:42.000Z</published>
+    <updated>2020-09-14T13:09:42.750Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body></body></html>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>题解 CF981B 【Businessmen Problems】</title>
+    <link href="https://yuygfgg.ml/2020/09/14/solution-cf981b-1/"/>
+    <id>https://yuygfgg.ml/2020/09/14/solution-cf981b-1/</id>
+    <published>2020-09-14T13:08:14.000Z</published>
+    <updated>2020-09-14T13:09:09.009Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><p>其实不要上面那个大佬讲得那么麻烦</p><p>用一个 $map$ 记录每个编号的最大价值，再遍历 $map$ 求总和就可以了</p><a id="more"></a><p>code:<br></p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fol(i,a,b) for(int i=a;i<=(b);i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> bor(i,a,b) for(int i=a;i>=(b);--i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">map</span><<span class="keyword">int</span>,<span class="keyword">int</span>> mp;</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> n,m,tmp;</span><br><span class="line">    <span class="built_in">cin</span>>>n;</span><br><span class="line">    fol(i,<span class="number">1</span>,n){</span><br><span class="line">        <span class="built_in">cin</span>>>m>>tmp;</span><br><span class="line">        mp[m]=max(mp[m],tmp);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">cin</span>>>n;</span><br><span class="line">    fol(i,<span class="number">1</span>,n){</span><br><span class="line">        <span class="built_in">cin</span>>>m>>tmp;</span><br><span class="line">        mp[m]=max(mp[m],tmp);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">map</span><<span class="keyword">int</span>,<span class="keyword">int</span>>::iterator it=mp.begin();it!=mp.end();it++){</span><br><span class="line">        sum+=(*it).second;</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">cout</span><<sum<<<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p></body></html>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其实不要上面那个大佬讲得那么麻烦&lt;/p&gt;
+&lt;p&gt;用一个 $map$ 记录每个编号的最大价值，再遍历 $map$ 求总和就可以了&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+      <category term="题解" scheme="https://yuygfgg.ml/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>题解 CF1110A 【Parity】</title>
@@ -419,54 +465,6 @@
     
       &lt;p&gt;思路：贪心。要让浇水的月份最少，就要让每个浇水月收益最大，所以做法是先将每个月的收益从大到小排序，尽量在收益大的月份浇水。&lt;/p&gt;
 &lt;p&gt;用multiset排序，每次取第i大累加直到满足要求即可&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-      <category term="题解" scheme="https://yuygfgg.ml/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>题解 CF919A 【Supermarket】</title>
-    <link href="https://yuygfgg.ml/2020/04/03/solution-cf919a/"/>
-    <id>https://yuygfgg.ml/2020/04/03/solution-cf919a/</id>
-    <published>2020-04-03T12:45:37.000Z</published>
-    <updated>2020-05-02T02:41:01.622Z</updated>
-    
-    <content type="html"><![CDATA[<html><head></head><body><p>思路：贪心，找单价最便宜的超市买即可</p><p>用set从小到大排序</p><a id="more"></a><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">set</span><<span class="keyword">long</span> <span class="keyword">double</span>> c;<span class="comment">//自动从小到大排序</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> m,n;</span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">    <span class="built_in">cin</span>>>m>>n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i<=m;i++){</span><br><span class="line">        <span class="built_in">cin</span>>>a>>b;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">double</span> tmp=((<span class="keyword">long</span> <span class="keyword">double</span>)a/b);</span><br><span class="line">        c.insert(tmp*n*<span class="number">1.0</span>);<span class="comment">//插入（*1.0用来强制类型转换，否则插入set的数是向下取整的int）</span></span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">set</span><<span class="keyword">long</span> <span class="keyword">double</span>>::iterator it=c.begin();<span class="comment">//最便宜超市的单价</span></span><br><span class="line">    <span class="built_in">cout</span><<fixed<<setprecision(<span class="number">10</span>)<<*it<<<span class="built_in">endl</span>;<span class="comment">//保留十位</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;思路：贪心，找单价最便宜的超市买即可&lt;/p&gt;
-&lt;p&gt;用set从小到大排序&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="洛谷" scheme="https://yuygfgg.ml/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-      <category term="题解" scheme="https://yuygfgg.ml/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>题解 SP11515 【BUSYMAN - I AM VERY BUSY】</title>
-    <link href="https://yuygfgg.ml/2020/04/03/solution-sp11515/"/>
-    <id>https://yuygfgg.ml/2020/04/03/solution-sp11515/</id>
-    <published>2020-04-03T06:35:01.000Z</published>
-    <updated>2020-04-13T12:48:43.519Z</updated>
-    
-    <content type="html"><![CDATA[<html><head></head><body><p>这题是特别水的贪心，可以用自动排序的set实现</p><p>主要思路：将所有活动按结束时间从小到大排序，能进行活动就进行，遇到不能的就结束</p><a id="more"></a><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string"><bits/stdc++.h></span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">data</span>{</span></span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">};</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">cmp</span>{</span><span class="comment">//比较函数类</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> data& x,<span class="keyword">const</span> data& y)</span></span>{</span><br><span class="line">            <span class="keyword">if</span>(x.b==y.b)<span class="comment">//如果结束时间一样就按开始时间排</span></span><br><span class="line">        <span class="keyword">return</span> x.a<y.a;</span><br><span class="line">    <span class="keyword">return</span> x.b<y.b;<span class="comment">//否则就按结束时间排</span></span><br><span class="line">        }</span><br><span class="line">};</span><br><span class="line"><span class="built_in">set</span><data,cmp> a;<span class="comment">//自动按比较函数类排序</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line"><span class="keyword">int</span> n,t,ans,last;</span><br><span class="line"><span class="built_in">cin</span>>>n;</span><br><span class="line">data tmp;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i<=n;i++){</span><br><span class="line"><span class="built_in">cin</span>>>t;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j<=t;j++){<span class="comment">//由于空间大小是set自动分配的，只能先输入临时变量再通过insert函数插入</span></span><br><span class="line"><span class="built_in">cin</span>>>tmp.a>>tmp.b;</span><br><span class="line">a.insert(tmp);</span><br><span class="line">}</span><br><span class="line"><span class="built_in">set</span><data>::iterator it=a.begin();<span class="comment">//指向开始的迭代器</span></span><br><span class="line">ans=<span class="number">0</span>;<span class="comment">//初始化</span></span><br><span class="line">last=INT_MIN;</span><br><span class="line"><span class="keyword">for</span>(;it!=a.end();it++){</span><br><span class="line"><span class="keyword">if</span>((*it).a>=last){<span class="comment">//来得及</span></span><br><span class="line">ans++;<span class="comment">//能去的加一</span></span><br><span class="line"><span class="comment">//cout<<i<<" "<<ans<<"eee"<<(*it).a<<" "<<(*it).b<<endl;</span></span><br><span class="line">last=(*it).b;<span class="comment">//更新上一次的结束时间</span></span><br><span class="line"></span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line"><span class="built_in">cout</span><<ans<<<span class="built_in">endl</span>;</span><br><span class="line">a.clear();<span class="comment">//insert会插入，不会覆盖，所以要清空set</span></span><br><span class="line">}</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这题是特别水的贪心，可以用自动排序的set实现&lt;/p&gt;
-&lt;p&gt;主要思路：将所有活动按结束时间从小到大排序，能进行活动就进行，遇到不能的就结束&lt;/p&gt;
     
     </summary>
     
